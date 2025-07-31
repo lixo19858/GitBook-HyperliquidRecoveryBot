@@ -12,7 +12,5 @@
 * [Address Detection](address-detection.md)
 * [Asset Recovery](asset-recovery.md)
 
-## Security & Help
-* [Security Guide](security.md)
+## Help
 * [FAQ](faq.md)
-* [Contact Support](contact.md)

@@ -67,8 +67,7 @@ If you encounter any issues while using:
 
 1. **View Guide**: Read the detailed user guide in this documentation
 2. **FAQ**: Check the [FAQ page](faq.md) for answers
-3. **Security Tips**: Read the [Security Guide](security.md) for best practices
-4. **Contact Support**: Use the feedback function within the bot to contact us
+3. **Contact Support**: Use the feedback function within the bot to contact us
 
 ## ⚠️ Important Notice
 

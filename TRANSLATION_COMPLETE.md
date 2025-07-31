@@ -17,11 +17,9 @@ I'm pleased to announce that the multilingual GitBook documentation translation 
 | **quick-start.md** | ✅ 完整翻译 | 快速开始指南 / Quick start guide |
 | **faq.md** | ✅ 完整翻译 | 常见问题解答 / FAQ |
 | **asset-recovery.md** | ✅ 完整翻译 | 资产恢复功能详解 / Asset recovery function details |
-| **security.md** | ✅ 完整翻译 | 安全指南 / Security guide |
 | **features.md** | ✅ 完整翻译 | 功能特性介绍 / Features introduction |
 | **bot-usage.md** | ✅ 完整翻译 | 机器人使用详解 / Bot usage guide |
 | **address-detection.md** | ✅ 完整翻译 | 地址检测功能 / Address detection function |
-| **contact.md** | ✅ 完整翻译 | 联系支持 / Contact support |
 
 ### 📈 翻译统计 / Translation Statistics
 
@@ -78,8 +76,6 @@ I'm pleased to announce that the multilingual GitBook documentation translation 
 用户指南 → User Guide
 快速开始 → Quick Start
 常见问题 → FAQ
-安全指南 → Security Guide
-联系支持 → Contact Support
 ```
 
 ## 🚀 部署就绪 / Ready for Deployment
@@ -117,10 +113,8 @@ docs/gitbook/
 │   ├── bot-usage.md       # ✅ 机器人使用
 │   ├── address-detection.md # ✅ 地址检测
 │   ├── asset-recovery.md  # ✅ 资产恢复
-│   ├── security.md        # ✅ 安全指南
 │   ├── faq.md             # ✅ 常见问题
-│   ├── features.md        # ✅ 功能特性
-│   └── contact.md         # ✅ 联系支持
+│   └── features.md        # ✅ 功能特性
 └── zh/                    # 🇨🇳 完整中文文档 / Complete Chinese docs
     ├── README.md          # ✅ 项目介绍
     ├── SUMMARY.md         # ✅ 中文目录
@@ -128,10 +122,8 @@ docs/gitbook/
     ├── bot-usage.md       # ✅ 机器人使用
     ├── address-detection.md # ✅ 地址检测
     ├── asset-recovery.md  # ✅ 资产恢复
-    ├── security.md        # ✅ 安全指南
     ├── faq.md             # ✅ 常见问题
-    ├── features.md        # ✅ 功能特性
-    └── contact.md         # ✅ 联系支持
+    └── features.md        # ✅ 功能特性
 ```
 
 ## 🎊 部署指南 / Deployment Guide

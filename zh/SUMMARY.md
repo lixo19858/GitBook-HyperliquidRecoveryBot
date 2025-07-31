@@ -12,7 +12,5 @@
 * [地址检测](address-detection.md)
 * [资产恢复](asset-recovery.md)
 
-## 安全与帮助
-* [安全指南](security.md)
+## 帮助
 * [常见问题](faq.md)
-* [联系支持](contact.md)
