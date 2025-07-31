@@ -1,281 +1,281 @@
-# 常见问题解答
+# Frequently Asked Questions
 
-本文档收集了用户在使用 Hyperliquid Recovery Bot 时最常遇到的问题和详细解答。
+This document collects the most common questions and detailed answers that users encounter when using Hyperliquid Recovery Bot.
 
-## 🤖 机器人基础问题
+## 🤖 Bot Basic Questions
 
-### Q: 什么是 Hyperliquid Recovery Bot？
-**A:** Hyperliquid Recovery Bot 是一个专业的 Telegram 机器人，专为 Hyperliquid 生态系统用户设计，帮助用户从被标记为高风险的地址中安全地恢复数字资产。
+### Q: What is Hyperliquid Recovery Bot?
+**A:** Hyperliquid Recovery Bot is a professional Telegram bot designed specifically for Hyperliquid ecosystem users to help users safely recover digital assets from addresses flagged as high-risk.
 
-### Q: 机器人是免费使用的吗？
-**A:** 机器人的基础功能（地址检测）是免费的。资产恢复服务会收取服务费：
-- **费率**: 按恢复金额的 0.5% 收费
-- **最低费用**: 1 USDC
-- **最高费用**: 100,000,000 USDC
+### Q: Is the bot free to use?
+**A:** The bot's basic functions (address detection) are free. Asset recovery services charge service fees:
+- **Rate**: 0.5% of recovery amount
+- **Minimum Fee**: 1 USDC
+- **Maximum Fee**: 100,000,000 USDC
 
-### Q: 如何确认这是官方机器人？
-**A:** 请确保使用官方链接访问机器人：
-- **官方地址**: https://t.me/HyperliquidRecoveryBot
-- **用户名**: @HyperliquidRecoveryBot
-- **验证标识**: 查看机器人的功能菜单和界面特征
+### Q: How to confirm this is the official bot?
+**A:** Please ensure you access the bot using the official link:
+- **Official Address**: https://t.me/HyperliquidRecoveryBot
+- **Username**: @HyperliquidRecoveryBot
+- **Verification**: Check the bot's function menu and interface features
 
-### Q: 机器人支持哪些语言？
-**A:** 目前支持：
-- **中文**: 完整的简体中文支持
+### Q: What languages does the bot support?
+**A:** Currently supports:
+- **Chinese**: Complete Simplified Chinese support
 - **English**: Full English language support
 
-### Q: 机器人的工作时间是什么？
-**A:** 机器人 24/7 全天候运行，随时可以使用。但建议在网络状况良好的时间进行重要操作。
+### Q: What are the bot's operating hours?
+**A:** The bot runs 24/7 and can be used at any time. However, it is recommended to perform important operations when network conditions are good.
 
-## 🔍 地址检测问题
+## 🔍 Address Detection Questions
 
-### Q: 支持哪些地址格式？
-**A:** 支持标准的 Hyperliquid 地址格式：
-- **长度**: 42 个字符（包含 0x 前缀）
-- **格式**: 0x + 40 位十六进制字符
-- **示例**: 0x1234567890123456789012345678901234567890
+### Q: What address formats are supported?
+**A:** Supports standard Hyperliquid address formats:
+- **Length**: 42 characters (including 0x prefix)
+- **Format**: 0x + 40 hexadecimal characters
+- **Example**: 0x1234567890123456789012345678901234567890
 
-### Q: 检测需要多长时间？
-**A:** 通常在几秒到几分钟内完成，具体时间取决于：
-- 网络状况
-- Hyperliquid API 响应速度
-- 地址的资产数量和复杂度
+### Q: How long does detection take?
+**A:** Usually completed within a few seconds to a few minutes, depending on:
+- Network conditions
+- Hyperliquid API response speed
+- Number and complexity of assets in the address
 
-### Q: 检测到的资产信息准确吗？
-**A:** 是的，机器人使用 Hyperliquid 官方 API 获取实时数据，信息准确可靠。但请注意：
-- 价格信息可能有 1-2 分钟延迟
-- 某些新代币可能暂时无价格信息
-- 网络拥堵可能影响数据更新
+### Q: Is the detected asset information accurate?
+**A:** Yes, the bot uses Hyperliquid official API to get real-time data, which is accurate and reliable. However, please note:
+- Price information may have 1-2 minutes delay
+- Some new tokens may temporarily have no price information
+- Network congestion may affect data updates
 
-### Q: 为什么有些资产没有显示价格？
-**A:** 可能的原因：
-- 新上线的代币暂无价格数据
-- 流动性较低的代币
-- 价格 API 暂时不可用
-- 代币已停止交易
+### Q: Why do some assets not display prices?
+**A:** Possible reasons:
+- Newly listed tokens have no price data yet
+- Low liquidity tokens
+- Price API temporarily unavailable
+- Token has been delisted or stopped trading
 
-### Q: 可以检测多个地址吗？
-**A:** 目前支持单个地址检测。批量检测功能正在开发中。
+### Q: Can multiple addresses be detected?
+**A:** Currently supports single address detection. Batch detection function is under development.
 
-### Q: 检测历史会保存多久？
-**A:** 检测历史会保存 30 天，之后会自动清理以保护用户隐私。
+### Q: How long is detection history saved?
+**A:** Detection history is saved for 30 days, after which it will be automatically cleaned to protect user privacy.
 
-## 🛠️ 资产恢复问题
+## 🛠️ Asset Recovery Questions
 
-### Q: 什么情况下需要资产恢复？
-**A:** 当您的地址被标记为高风险，出现以下情况时：
-- 无法访问 Hyperliquid 前端界面
-- 前端显示"地址被限制"等提示
-- 无法进行正常的交易操作
-- 资产被"冻结"无法操作
+### Q: When is asset recovery needed?
+**A:** When your address is flagged as high-risk and the following situations occur:
+- Cannot access Hyperliquid frontend interface
+- Frontend displays "address restricted" and other prompts
+- Cannot perform normal trading operations
+- Assets are "frozen" and cannot be operated
 
-### Q: 恢复过程需要多长时间？
-**A:** 通常需要 3-8 分钟，具体时间取决于：
-- 资产类型和数量
-- 是否需要转换永续合约资产
-- 网络拥堵情况
-- 交易确认速度
+### Q: How long does the recovery process take?
+**A:** Usually takes 3-8 minutes, depending on:
+- Asset types and quantities
+- Whether perpetual contract assets need conversion
+- Network congestion conditions
+- Transaction confirmation speed
 
-### Q: 恢复过程中可以取消吗？
-**A:** 一旦确认开始恢复操作，就无法取消。因此请在确认前仔细检查所有信息。
+### Q: Can the recovery process be cancelled?
+**A:** Once confirmed to start recovery operation, it cannot be cancelled. Therefore, please carefully check all information before confirmation.
 
-### Q: 私钥安全吗？
-**A:** 是的，我们采用多重安全措施：
-- 使用 AES-256 加密算法
-- 仅在恢复过程中临时存储
-- 操作完成后立即清理
-- 不会持久化保存私钥
+### Q: Is the private key secure?
+**A:** Yes, we adopt multiple security measures:
+- Use AES-256 encryption algorithm
+- Only temporarily stored during recovery process
+- Immediately cleaned after operation completion
+- Private key will not be persistently saved
 
-### Q: 可以指定提现到特定地址吗？
-**A:** 是的，您可以：
-- 使用系统自动生成的安全地址
-- 指定您自己的目标地址
-- 从钱包管理中选择地址
+### Q: Can I specify withdrawal to a specific address?
+**A:** Yes, you can:
+- Use system auto-generated safe address
+- Specify your own target address
+- Select address from wallet management
 
-### Q: 恢复失败了怎么办？
-**A:** 如果恢复失败：
-1. 检查网络连接是否稳定
-2. 确认私钥和地址是否正确
-3. 查看错误提示信息
-4. 联系技术支持获取帮助
-5. 可以尝试重新恢复
+### Q: What to do if recovery fails?
+**A:** If recovery fails:
+1. Check if network connection is stable
+2. Confirm if private key and address are correct
+3. Check error message information
+4. Contact technical support for help
+5. Can try recovery again
 
-## 💰 费用相关问题
+## 💰 Fee Related Questions
 
-### Q: 服务费是如何计算的？
-**A:** 服务费计算公式：
+### Q: How is the service fee calculated?
+**A:** Service fee calculation formula:
 ```
-服务费 = max(恢复金额 × 0.5%, 1 USDC)
+Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 ```
 
-### Q: 服务费包含哪些内容？
-**A:** 服务费包含：
-- 资产恢复操作费用
-- 区块链网络手续费
-- 技术服务和维护费用
-- 操作风险保障费用
+### Q: What does the service fee include?
+**A:** Service fee includes:
+- Asset recovery operation fee
+- Blockchain network transaction fees
+- Technical service and maintenance fees
+- Operation risk guarantee fees
 
-### Q: 什么时候收取服务费？
-**A:** 服务费在恢复操作完成时自动从恢复的资产中扣除，优先级为：
+### Q: When is the service fee charged?
+**A:** Service fee is automatically deducted from recovered assets when recovery operation is completed, with priority:
 1. USDC
 2. ETH
 3. BTC
-4. 其他代币
+4. Other tokens
 
-### Q: 如果恢复失败，会收取费用吗？
-**A:** 不会。只有在恢复成功完成后才会收取服务费。
+### Q: Will fees be charged if recovery fails?
+**A:** No. Service fees are only charged after successful recovery completion.
 
-### Q: 可以用其他代币支付服务费吗？
-**A:** 服务费会自动从恢复的资产中扣除，支持多种代币支付。
+### Q: Can other tokens be used to pay service fees?
+**A:** Service fees are automatically deducted from recovered assets, supporting multiple token payments.
 
-## 🔒 安全相关问题
+## 🔒 Security Related Questions
 
-### Q: 如何确保操作安全？
-**A:** 请遵循以下安全建议：
-- 在安全的设备和网络环境下操作
-- 不要在公共场所输入私钥
-- 仔细验证每个操作步骤
-- 操作完成后清理相关痕迹
+### Q: How to ensure operation security?
+**A:** Please follow these security recommendations:
+- Operate in secure devices and network environments
+- Do not enter private keys in public places
+- Carefully verify each operation step
+- Clean related traces after operation completion
 
-### Q: 私钥会被保存吗？
-**A:** 不会。私钥仅在恢复过程中临时使用，操作完成后会立即清理，不会进行任何形式的持久化保存。
+### Q: Will private keys be saved?
+**A:** No. Private keys are only temporarily used during the recovery process and will be immediately cleaned after operation completion, without any form of persistent storage.
 
-### Q: 如何防范诈骗？
-**A:** 请注意：
-- 只使用官方机器人 @HyperliquidRecoveryBot
-- 不要在其他地方输入私钥
-- 官方永远不会主动要求您提供私钥
-- 警惕虚假承诺和不合理的收益保证
+### Q: How to prevent fraud?
+**A:** Please note:
+- Only use the official bot @HyperliquidRecoveryBot
+- Do not enter private keys elsewhere
+- Official will never actively ask you to provide private keys
+- Be wary of false promises and unreasonable profit guarantees
 
-### Q: 发现可疑活动怎么办？
-**A:** 如果发现任何可疑活动：
-1. 立即停止操作
-2. 截图保存证据（不包含敏感信息）
-3. 通过机器人反馈功能报告
-4. 联系技术支持
+### Q: What to do if suspicious activity is found?
+**A:** If any suspicious activity is found:
+1. Stop operation immediately
+2. Screenshot and save evidence (excluding sensitive information)
+3. Report through bot feedback function
+4. Contact technical support
 
-## 🔧 技术问题
+## 🔧 Technical Questions
 
-### Q: 为什么地址验证失败？
-**A:** 可能的原因：
-- 地址格式不正确（缺少 0x 前缀或长度错误）
-- 包含无效字符
-- 复制粘贴时包含了额外的空格或字符
-- 不是有效的以太坊地址格式
+### Q: Why does address validation fail?
+**A:** Possible reasons:
+- Incorrect address format (missing 0x prefix or wrong length)
+- Contains invalid characters
+- Extra spaces or characters included during copy-paste
+- Not a valid Ethereum address format
 
-### Q: 为什么私钥验证失败？
-**A:** 可能的原因：
-- 私钥格式错误（包含了 0x 前缀）
-- 私钥长度不正确（应为 64 位十六进制）
-- 私钥与地址不匹配
-- 输入时包含了额外字符
+### Q: Why does private key validation fail?
+**A:** Possible reasons:
+- Incorrect private key format (includes 0x prefix)
+- Incorrect private key length (should be 64 hexadecimal characters)
+- Private key does not match address
+- Extra characters included during input
 
-### Q: 网络错误怎么处理？
-**A:** 遇到网络错误时：
-1. 检查网络连接是否稳定
-2. 尝试切换到更稳定的网络
-3. 等待几分钟后重试
-4. 如果问题持续，联系技术支持
+### Q: How to handle network errors?
+**A:** When encountering network errors:
+1. Check if network connection is stable
+2. Try switching to a more stable network
+3. Wait a few minutes and retry
+4. If problem persists, contact technical support
 
-### Q: API 调用失败怎么办？
-**A:** API 调用失败可能是因为：
-- Hyperliquid API 暂时不可用
-- 网络连接问题
-- 请求频率过高
-- 建议稍后重试或联系技术支持
+### Q: What to do if API calls fail?
+**A:** API call failures may be due to:
+- Hyperliquid API temporarily unavailable
+- Network connection issues
+- Request frequency too high
+- Recommend retrying later or contacting technical support
 
-## 📱 使用体验问题
+## 📱 User Experience Questions
 
-### Q: 可以在手机上使用吗？
-**A:** 是的，机器人完全支持手机端使用。建议：
-- 使用最新版本的 Telegram 应用
-- 确保手机网络连接稳定
-- 在安全的环境下操作
+### Q: Can it be used on mobile phones?
+**A:** Yes, the bot fully supports mobile use. Recommendations:
+- Use the latest version of Telegram app
+- Ensure stable mobile network connection
+- Operate in secure environment
 
-### Q: 界面显示异常怎么办？
-**A:** 如果界面显示异常：
-1. 尝试重新启动 Telegram 应用
-2. 发送 /start 命令重新初始化
-3. 检查 Telegram 应用是否为最新版本
-4. 如果问题持续，联系技术支持
+### Q: What to do if interface display is abnormal?
+**A:** If interface display is abnormal:
+1. Try restarting Telegram app
+2. Send /start command to reinitialize
+3. Check if Telegram app is the latest version
+4. If problem persists, contact technical support
 
-### Q: 操作响应很慢怎么办？
-**A:** 操作响应慢可能是因为：
-- 网络连接不稳定
-- Telegram 服务器负载较高
-- Hyperliquid API 响应较慢
-- 建议在网络状况良好时操作
+### Q: What to do if operation response is slow?
+**A:** Slow operation response may be due to:
+- Unstable network connection
+- High Telegram server load
+- Slow Hyperliquid API response
+- Recommend operating when network conditions are good
 
-### Q: 如何提供反馈和建议？
-**A:** 您可以通过以下方式提供反馈：
-- 使用机器人内的反馈功能
-- 详细描述问题或建议
-- 提供相关截图（不包含敏感信息）
+### Q: How to provide feedback and suggestions?
+**A:** You can provide feedback through:
+- Use feedback function within the bot
+- Describe problems or suggestions in detail
+- Provide relevant screenshots (excluding sensitive information)
 
-## 🆘 紧急情况
+## 🆘 Emergency Situations
 
-### Q: 恢复过程中出现错误怎么办？
-**A:** 如果恢复过程中出现错误：
-1. 不要惊慌，记录错误信息
-2. 检查网络连接是否正常
-3. 查看是否有部分操作已完成
-4. 联系技术支持并提供详细信息
+### Q: What to do if errors occur during recovery process?
+**A:** If errors occur during recovery process:
+1. Don't panic, record error information
+2. Check if network connection is normal
+3. Check if some operations have been completed
+4. Contact technical support and provide detailed information
 
-### Q: 资产没有到达目标地址怎么办？
-**A:** 如果资产没有到达目标地址：
-1. 检查交易哈希在区块链浏览器中的状态
-2. 确认目标地址是否正确
-3. 等待更多区块确认
-4. 如果确认有问题，立即联系技术支持
+### Q: What to do if assets don't reach target address?
+**A:** If assets don't reach target address:
+1. Check transaction hash status in blockchain explorer
+2. Confirm if target address is correct
+3. Wait for more block confirmations
+4. If confirmed there's a problem, contact technical support immediately
 
-### Q: 如何联系技术支持？
-**A:** 联系技术支持的方式：
-- 使用机器人内的反馈功能
-- 详细描述问题和操作步骤
-- 提供相关的时间、地址、交易哈希等信息
-- 紧急情况请标明"紧急"
+### Q: How to contact technical support?
+**A:** Ways to contact technical support:
+- Use feedback function within the bot
+- Describe problems and operation steps in detail
+- Provide relevant time, address, transaction hash and other information
+- Mark "urgent" for emergency situations
 
-## 📊 其他问题
+## 📊 Other Questions
 
-### Q: 可以查看历史操作记录吗？
-**A:** 是的，您可以查看：
-- 地址检测历史
-- 资产恢复记录
-- 交易哈希和时间
-- 操作结果和状态
+### Q: Can I view historical operation records?
+**A:** Yes, you can view:
+- Address detection history
+- Asset recovery records
+- Transaction hashes and times
+- Operation results and status
 
-### Q: 机器人会定期更新吗？
-**A:** 是的，我们会定期更新机器人：
-- 修复已知问题
-- 添加新功能
-- 改进用户体验
-- 增强安全性
+### Q: Will the bot be updated regularly?
+**A:** Yes, we will update the bot regularly:
+- Fix known issues
+- Add new features
+- Improve user experience
+- Enhance security
 
-### Q: 有使用教程或视频吗？
-**A:** 目前提供：
-- 详细的文字教程
-- 图文并茂的使用指南
-- 常见问题解答
-- 视频教程正在制作中
+### Q: Are there tutorials or videos available?
+**A:** Currently provides:
+- Detailed text tutorials
+- Illustrated user guides
+- Frequently asked questions
+- Video tutorials are in production
 
 ---
 
-## 💬 还有其他问题？
+## 💬 Have Other Questions?
 
-如果您的问题没有在这里找到答案，请：
+If your question is not answered here, please:
 
-1. **查看其他文档**：
-   - [快速开始](quick-start.md)
-   - [机器人使用详解](bot-usage.md)
+1. **View Other Documentation**:
+   - [Quick Start](quick-start.md)
+   - [Bot Usage Guide](bot-usage.md)
 
-2. **联系我们**：
-   - 使用机器人内的反馈功能
-   - 详细描述您的问题
-   - 我们会尽快回复您
+2. **Contact Us**:
+   - Use feedback function within the bot
+   - Describe your problem in detail
+   - We will reply to you as soon as possible
 
-3. **社区支持**：
-   - 加入用户交流群
-   - 查看社区讨论
-   - 分享使用经验
+3. **Community Support**:
+   - Join user discussion groups
+   - View community discussions
+   - Share usage experiences
 
-**记住**：我们致力于为您提供最好的服务和支持！
+**Remember**: We are committed to providing you with the best service and support!

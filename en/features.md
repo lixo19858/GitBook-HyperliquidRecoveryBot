@@ -2,181 +2,181 @@
 
 Hyperliquid Recovery Bot provides a complete asset detection and recovery solution, specifically designed to solve Hyperliquid high-risk address issues.
 
-## 🔍 地址检测功能
+## 🔍 Address Detection Function
 
-### 智能资产识别
-- **全面检测**: 自动识别现货(Spot)和永续合约(Perp)资产
-- **实时数据**: 使用 Hyperliquid 官方 API 获取最新资产信息
-- **精确计算**: 实时计算资产的 USD 价值和持有数量
-- **状态监控**: 监控资产状态变化和可用性
+### Smart Asset Recognition
+- **Comprehensive Detection**: Automatically identify spot and perpetual contract (Perp) assets
+- **Real-time Data**: Use Hyperliquid official API to get latest asset information
+- **Precise Calculation**: Real-time calculation of asset USD value and holding quantities
+- **Status Monitoring**: Monitor asset status changes and availability
 
-### 风险评估系统
-- **智能评级**: 自动评估地址风险等级
-  - 🟢 **低风险**: 正常地址，可正常使用
-  - 🟡 **中等风险**: 轻微风险标记，建议谨慎操作
-  - 🔴 **高风险**: 被限制地址，建议立即恢复资产
-- **第三方验证**: 集成多个风险数据库进行交叉验证
-- **实时更新**: 风险状态实时更新，确保信息准确
+### Risk Assessment System
+- **Smart Rating**: Automatically assess address risk levels
+  - 🟢 **Low Risk**: Normal address, can be used normally
+  - 🟡 **Medium Risk**: Minor risk flags, recommend cautious operation
+  - 🔴 **High Risk**: Restricted address, recommend immediate asset recovery
+- **Third-party Verification**: Integrate multiple risk databases for cross-validation
+- **Real-time Updates**: Risk status updated in real-time to ensure information accuracy
 
-### 检测结果展示
+### Detection Result Display
 ```
-✅ 检测完成
+✅ Detection Complete
 
-📍 地址: 0x1234...7890
-🔍 风险等级: 高风险
-💰 总价值: $1,234.56
-📊 资产种类: 3 种
+📍 Address: 0x1234...7890
+🔍 Risk Level: High Risk
+💰 Total Value: $1,234.56
+📊 Asset Types: 3 types
 
-📋 资产详情:
+📋 Asset Details:
 ┌─────────────────────────────────┐
-│ 现货资产 (Spot)                  │
+│ Spot Assets (Spot)              │
 ├─────────────────────────────────┤
 │ USDC: 500.00 ($500.00)         │
 │ ETH: 0.5 ($734.56)             │
 └─────────────────────────────────┘
 
-🛠️ 可恢复: 是
-💡 建议: 立即使用资产恢复功能
+🛠️ Recoverable: Yes
+💡 Suggestion: Immediately use asset recovery function
 ```
 
-## 🛠️ 资产恢复功能
+## 🛠️ Asset Recovery Function
 
-### 自动化恢复流程
-- **一键操作**: 用户只需提供私钥，系统自动完成所有恢复步骤
-- **智能路径**: 自动选择最优的资产转换和提现路径
-- **进度跟踪**: 实时显示恢复进度，让用户了解每个步骤的状态
-- **错误处理**: 智能错误处理和重试机制，确保操作成功
+### Automated Recovery Process
+- **One-click Operation**: Users only need to provide private key, system automatically completes all recovery steps
+- **Smart Path**: Automatically select optimal asset conversion and withdrawal paths
+- **Progress Tracking**: Real-time display of recovery progress, letting users understand each step's status
+- **Error Handling**: Smart error handling and retry mechanisms to ensure operation success
 
-### 资产转换处理
-- **Perp to Spot**: 自动将永续合约资产转换为现货资产
-- **持仓管理**: 智能处理活跃持仓，先平仓再转移保证金
-- **精度控制**: 精确处理小数位数和最小交易单位
-- **滑点保护**: 自动设置合理滑点，保护用户利益
+### Asset Conversion Processing
+- **Perp to Spot**: Automatically convert perpetual contract assets to spot assets
+- **Position Management**: Intelligently handle active positions, close positions first then transfer margin
+- **Precision Control**: Precisely handle decimal places and minimum trading units
+- **Slippage Protection**: Automatically set reasonable slippage to protect user interests
 
-### 安全提现机制
-- **多重验证**: 地址验证、私钥验证、资产验证
-- **分批处理**: 大额资产支持分批提现，降低风险
-- **目标地址**: 支持自定义目标地址或使用系统生成的安全地址
-- **交易确认**: 等待区块确认，确保交易成功
+### Secure Withdrawal Mechanism
+- **Multiple Verification**: Address verification, private key verification, asset verification
+- **Batch Processing**: Large assets support batch withdrawal to reduce risk
+- **Target Address**: Support custom target address or use system-generated safe address
+- **Transaction Confirmation**: Wait for block confirmation to ensure transaction success
 
-## 💰 透明费用结构
+## 💰 Transparent Fee Structure
 
-### 费用计算
-- **基础费率**: 0.5% (按恢复资产总价值计算)
-- **最低费用**: 1 USDC
-- **最高费用**: 100,000,000 USDC
-- **计算公式**: `服务费 = max(恢复金额 × 0.5%, 1 USDC)`
+### Fee Calculation
+- **Base Rate**: 0.5% (calculated based on total recovered asset value)
+- **Minimum Fee**: 1 USDC
+- **Maximum Fee**: 100,000,000 USDC
+- **Calculation Formula**: `Service Fee = max(Recovery Amount × 0.5%, 1 USDC)`
 
-### 费用包含
-- **恢复服务**: 完整的资产恢复操作
-- **网络费用**: 所有区块链交易手续费
-- **技术支持**: 专业技术支持和故障处理
-- **风险保障**: 操作风险保障和保险
+### Fee Includes
+- **Recovery Service**: Complete asset recovery operations
+- **Network Fees**: All blockchain transaction fees
+- **Technical Support**: Professional technical support and troubleshooting
+- **Risk Guarantee**: Operation risk guarantee and insurance
 
-### 收费方式
-- **自动扣除**: 从恢复的资产中自动扣除
-- **优先级**: USDC > ETH > BTC > 其他代币
-- **透明显示**: 所有费用在操作前明确显示
-- **无隐藏费**: 不收取任何额外或隐藏费用
+### Charging Method
+- **Automatic Deduction**: Automatically deducted from recovered assets
+- **Priority**: USDC > ETH > BTC > Other tokens
+- **Transparent Display**: All fees clearly displayed before operation
+- **No Hidden Fees**: No additional or hidden fees charged
 
-## 🌐 多语言支持
+## 🌐 Multilingual Support
 
-### 支持语言
-- **中文 (zh)**: 完整的简体中文界面
-- **English (en)**: 完整的英文界面
-- **动态切换**: 用户可随时切换界面语言
+### Supported Languages
+- **Chinese (zh)**: Complete Simplified Chinese interface
+- **English (en)**: Complete English interface
+- **Dynamic Switching**: Users can switch interface language at any time
 
-### 本地化特性
-- **文化适配**: 针对不同文化背景优化用户体验
-- **数字格式**: 根据语言习惯格式化数字和货币
-- **时间显示**: 本地化时间和日期格式
+### Localization Features
+- **Cultural Adaptation**: Optimize user experience for different cultural backgrounds
+- **Number Format**: Format numbers and currency according to language habits
+- **Time Display**: Localized time and date formats
 
-## 🔒 安全功能
+## 🔒 Security Features
 
-### 私钥保护
-- **加密存储**: 使用 AES-256 加密算法
-- **临时存储**: 仅在恢复过程中临时存储
-- **自动清理**: 操作完成后立即清理所有敏感数据
-- **内存保护**: 防止内存转储泄露私钥信息
+### Private Key Protection
+- **Encrypted Storage**: Use AES-256 encryption algorithm
+- **Temporary Storage**: Only temporarily stored during recovery process
+- **Automatic Cleanup**: Immediately clean all sensitive data after operation completion
+- **Memory Protection**: Prevent memory dumps from leaking private key information
 
-### 操作安全
-- **多重验证**: 地址、私钥、资产状态多重验证
-- **操作日志**: 记录所有关键操作的详细日志
-- **异常检测**: 自动检测异常操作和可疑行为
-- **紧急停止**: 提供紧急停止机制
+### Operation Security
+- **Multiple Verification**: Address, private key, asset status multiple verification
+- **Operation Logs**: Record detailed logs of all critical operations
+- **Anomaly Detection**: Automatically detect abnormal operations and suspicious behavior
+- **Emergency Stop**: Provide emergency stop mechanism
 
-### 风险控制
-- **金额限制**: 设置合理的单次操作金额限制
-- **频率控制**: 防止恶意或异常频繁的操作
-- **IP 监控**: 监控异常 IP 访问和操作
-- **行为分析**: 分析用户行为模式，识别风险
+### Risk Control
+- **Amount Limits**: Set reasonable single operation amount limits
+- **Frequency Control**: Prevent malicious or abnormally frequent operations
+- **IP Monitoring**: Monitor abnormal IP access and operations
+- **Behavior Analysis**: Analyze user behavior patterns to identify risks
 
-## 📊 监控和统计
+## 📊 Monitoring and Statistics
 
-### 用户行为跟踪
-- **访问记录**: 记录用户访问时间和操作历史
-- **来源追踪**: 跟踪用户来源（如推广链接）
-- **使用统计**: 统计功能使用频率和偏好
-- **成功率**: 跟踪操作成功率和失败原因
+### User Behavior Tracking
+- **Access Records**: Record user access time and operation history
+- **Source Tracking**: Track user sources (such as promotional links)
+- **Usage Statistics**: Statistics on function usage frequency and preferences
+- **Success Rate**: Track operation success rate and failure reasons
 
-### 系统监控
-- **性能监控**: 实时监控系统响应时间和资源使用
-- **API 状态**: 监控外部 API 调用状态和响应时间
-- **错误跟踪**: 自动记录和分析系统错误
-- **可用性**: 监控系统可用性和服务质量
+### System Monitoring
+- **Performance Monitoring**: Real-time monitoring of system response time and resource usage
+- **API Status**: Monitor external API call status and response time
+- **Error Tracking**: Automatically record and analyze system errors
+- **Availability**: Monitor system availability and service quality
 
-## 🔧 高级功能
+## 🔧 Advanced Features
 
-### 批量操作 (开发中)
-- **批量检测**: 一次检测多个地址
-- **批量恢复**: 同时恢复多个地址的资产
-- **汇总报告**: 生成批量操作的汇总报告
+### Batch Operations (Under Development)
+- **Batch Detection**: Detect multiple addresses at once
+- **Batch Recovery**: Simultaneously recover assets from multiple addresses
+- **Summary Reports**: Generate summary reports for batch operations
 
-### 定时监控 (开发中)
-- **定时检测**: 设置定时检测任务
-- **状态通知**: 资产或风险状态变化通知
-- **自动恢复**: 满足条件时自动触发恢复
+### Scheduled Monitoring (Under Development)
+- **Scheduled Detection**: Set up scheduled detection tasks
+- **Status Notifications**: Asset or risk status change notifications
+- **Automatic Recovery**: Automatically trigger recovery when conditions are met
 
-### API 接口 (规划中)
-- **开放 API**: 为开发者提供 API 接口
-- **第三方集成**: 支持第三方应用集成
-- **Webhook**: 支持 Webhook 通知机制
+### API Interface (Planned)
+- **Open API**: Provide API interface for developers
+- **Third-party Integration**: Support third-party application integration
+- **Webhook**: Support Webhook notification mechanism
 
-## 📱 用户体验
+## 📱 User Experience
 
-### 界面设计
-- **简洁直观**: 清晰的按钮和菜单设计
-- **响应式**: 适配手机和桌面端 Telegram
-- **实时反馈**: 即时的操作反馈和状态更新
-- **错误提示**: 友好的错误提示和解决建议
+### Interface Design
+- **Clean and Intuitive**: Clear button and menu design
+- **Responsive**: Adapted for mobile and desktop Telegram
+- **Real-time Feedback**: Instant operation feedback and status updates
+- **Error Prompts**: Friendly error prompts and solution suggestions
 
-### 操作流程
-- **向导式**: 步骤清晰的操作向导
-- **确认机制**: 重要操作前的确认机制
-- **进度显示**: 详细的操作进度显示
-- **结果展示**: 清晰的操作结果展示
+### Operation Flow
+- **Wizard-style**: Clear step-by-step operation wizard
+- **Confirmation Mechanism**: Confirmation mechanism before important operations
+- **Progress Display**: Detailed operation progress display
+- **Result Presentation**: Clear operation result presentation
 
-### 帮助支持
-- **内置帮助**: 机器人内置的帮助和说明
-- **常见问题**: 完整的 FAQ 和问题解答
-- **技术支持**: 24/7 技术支持服务
-- **用户反馈**: 便捷的反馈和建议渠道
+### Help Support
+- **Built-in Help**: Built-in help and instructions within the bot
+- **FAQ**: Complete FAQ and problem solutions
+- **Technical Support**: 24/7 technical support service
+- **User Feedback**: Convenient feedback and suggestion channels
 
-## 🚀 性能特点
+## 🚀 Performance Features
 
-### 响应速度
-- **快速检测**: 通常 5-30 秒完成地址检测
-- **高效恢复**: 3-8 分钟完成资产恢复
-- **实时更新**: 实时更新操作状态和进度
+### Response Speed
+- **Fast Detection**: Usually complete address detection in 5-30 seconds
+- **Efficient Recovery**: Complete asset recovery in 3-8 minutes
+- **Real-time Updates**: Real-time updates of operation status and progress
 
-### 可靠性
-- **高可用**: 99.9% 的系统可用性
-- **容错机制**: 完善的错误处理和恢复机制
-- **数据备份**: 重要数据的自动备份和恢复
+### Reliability
+- **High Availability**: 99.9% system availability
+- **Fault Tolerance**: Complete error handling and recovery mechanisms
+- **Data Backup**: Automatic backup and recovery of important data
 
-### 扩展性
-- **模块化**: 模块化设计，易于功能扩展
-- **API 友好**: 为未来的 API 集成做好准备
-- **多实例**: 支持多实例部署和负载均衡
+### Scalability
+- **Modular**: Modular design, easy for feature expansion
+- **API Friendly**: Ready for future API integration
+- **Multi-instance**: Support multi-instance deployment and load balancing
 
-这些功能特性确保了 Hyperliquid Recovery Bot 能够为用户提供安全、高效、用户友好的资产恢复服务。
+These features ensure that Hyperliquid Recovery Bot can provide users with secure, efficient, and user-friendly asset recovery services.

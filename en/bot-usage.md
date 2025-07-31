@@ -168,188 +168,188 @@ Perpetual Contract Assets:
 🏦 Service Fee: $6.17 (0.5%)
 💵 Actual Receipt: $1,228.39
 
-📝 执行步骤:
-1. ✅ 资产分析完成
-2. 🔄 转换永续合约资产 (如有)
-3. 🔄 提现现货资产
-4. 🔄 收取服务费
-5. 🔄 清理临时数据
+📝 Execution Steps:
+1. ✅ Asset analysis complete
+2. 🔄 Convert perpetual contract assets (if any)
+3. 🔄 Withdraw spot assets
+4. 🔄 Collect service fee
+5. 🔄 Clean temporary data
 
-⏱️ 预估时间: 2-5 分钟
+⏱️ Estimated Time: 2-5 minutes
 
-确认执行恢复操作？
-[确认恢复] [取消操作]
+Confirm execution of recovery operation?
+[Confirm Recovery] [Cancel Operation]
 ```
 
-#### 6. 执行恢复
+#### 6. Execute Recovery
 ```
-🚀 开始执行恢复...
+🚀 Starting recovery execution...
 
-步骤 1/4: 准备恢复环境
-✅ 验证私钥和地址
-✅ 检查网络连接
-✅ 初始化恢复参数
+Step 1/4: Prepare recovery environment
+✅ Verify private key and address
+✅ Check network connection
+✅ Initialize recovery parameters
 
-步骤 2/4: 转换资产 (如需要)
-🔄 正在转换永续合约资产...
-✅ 转换完成
+Step 2/4: Convert assets (if needed)
+🔄 Converting perpetual contract assets...
+✅ Conversion complete
 
-步骤 3/4: 提现资产
-🔄 正在提现 USDC...
-✅ USDC 提现完成
-🔄 正在提现 ETH...
-✅ ETH 提现完成
+Step 3/4: Withdraw assets
+🔄 Withdrawing USDC...
+✅ USDC withdrawal complete
+🔄 Withdrawing ETH...
+✅ ETH withdrawal complete
 
-步骤 4/4: 收取服务费
-🔄 正在收取服务费...
-✅ 服务费收取完成
+Step 4/4: Collect service fee
+🔄 Collecting service fee...
+✅ Service fee collection complete
 
-🎉 恢复完成！
+🎉 Recovery complete!
 ```
 
-#### 7. 恢复结果
+#### 7. Recovery Results
 ```
-✅ 资产恢复成功！
+✅ Asset recovery successful!
 
-📊 恢复摘要:
+📊 Recovery Summary:
 ┌─────────────────────────────────┐
-│ 恢复详情                         │
+│ Recovery Details                │
 ├─────────────────────────────────┤
-│ 源地址: 0x1234...7890           │
-│ 目标地址: 0x5678...1234         │
-│ 恢复时间: 2024-01-15 14:30:25   │
+│ Source Address: 0x1234...7890   │
+│ Target Address: 0x5678...1234   │
+│ Recovery Time: 2024-01-15 14:30:25 │
 └─────────────────────────────────┘
 
-💰 资产明细:
-• USDC: 493.83 (已扣除服务费)
+💰 Asset Details:
+• USDC: 493.83 (service fee deducted)
 • ETH: 0.5
 
-🧾 费用明细:
-• 服务费: $6.17 (0.5%)
-• 网络费: 已包含
+🧾 Fee Details:
+• Service Fee: $6.17 (0.5%)
+• Network Fee: Included
 
-🔗 交易记录:
-• 交易哈希: 0xabcd...ef12
-• 区块确认: 已确认
+🔗 Transaction Records:
+• Transaction Hash: 0xabcd...ef12
+• Block Confirmation: Confirmed
 
-感谢使用 Hyperliquid Recovery Bot！
+Thank you for using Hyperliquid Recovery Bot!
 ```
 
-## 🔧 高级功能
+## 🔧 Advanced Features
 
-### 批量地址检测
+### Batch Address Detection
 ```
-机器人: 🔍 批量地址检测 (开发中)
+Bot: 🔍 Batch Address Detection (Under Development)
 
-功能说明:
-• 支持一次检测多个地址
-• 生成汇总报告
-• 导出检测结果
+Function Description:
+• Support detecting multiple addresses at once
+• Generate summary reports
+• Export detection results
 
-使用方法:
-1. 选择批量检测模式
-2. 输入多个地址 (每行一个)
-3. 等待批量检测完成
-4. 查看汇总结果
-```
-
-### 定时检测
-```
-机器人: ⏰ 定时检测 (开发中)
-
-功能说明:
-• 设置定时检测任务
-• 资产变化通知
-• 风险状态监控
-
-使用方法:
-1. 添加监控地址
-2. 设置检测频率
-3. 配置通知方式
-4. 启动定时任务
+Usage Method:
+1. Select batch detection mode
+2. Input multiple addresses (one per line)
+3. Wait for batch detection completion
+4. View summary results
 ```
 
-## 📊 使用统计
-
-### 个人统计
+### Scheduled Detection
 ```
-机器人: 📊 我的使用统计
+Bot: ⏰ Scheduled Detection (Under Development)
 
-📈 使用概况:
-• 检测次数: 15 次
-• 恢复次数: 3 次
-• 恢复金额: $5,678.90
-• 节省费用: $28.39
+Function Description:
+• Set up scheduled detection tasks
+• Asset change notifications
+• Risk status monitoring
 
-📅 最近活动:
-• 最后检测: 2024-01-15 14:30
-• 最后恢复: 2024-01-10 09:15
-
-🏆 用户等级: 活跃用户
+Usage Method:
+1. Add monitoring addresses
+2. Set detection frequency
+3. Configure notification methods
+4. Start scheduled tasks
 ```
 
-### 系统统计
+## 📊 Usage Statistics
+
+### Personal Statistics
 ```
-机器人: 🌐 系统统计
+Bot: 📊 My Usage Statistics
 
-📊 全局数据:
-• 总检测次数: 10,234 次
-• 总恢复次数: 1,567 次
-• 总恢复金额: $2,345,678.90
-• 活跃用户: 3,456 人
+📈 Usage Overview:
+• Detection Count: 15 times
+• Recovery Count: 3 times
+• Recovery Amount: $5,678.90
+• Saved Fees: $28.39
 
-📈 今日数据:
-• 检测次数: 234 次
-• 恢复次数: 45 次
-• 新用户: 67 人
-```
+📅 Recent Activity:
+• Last Detection: 2024-01-15 14:30
+• Last Recovery: 2024-01-10 09:15
 
-## 🔔 通知设置
-
-### 通知类型
-- **检测完成通知**: 地址检测完成时通知
-- **恢复进度通知**: 恢复过程中的进度更新
-- **风险警告通知**: 发现高风险地址时警告
-- **系统维护通知**: 系统维护和更新通知
-
-### 通知配置
-```
-机器人: 🔔 通知设置
-
-当前设置:
-✅ 检测完成通知
-✅ 恢复进度通知  
-✅ 风险警告通知
-❌ 系统维护通知
-
-[修改设置] [恢复默认]
+🏆 User Level: Active User
 ```
 
-## 💬 反馈和支持
-
-### 反馈功能
+### System Statistics
 ```
-机器人: 💬 意见反馈
+Bot: 🌐 System Statistics
 
-请选择反馈类型:
-[功能建议] [问题报告] [使用体验] [其他]
+📊 Global Data:
+• Total Detections: 10,234 times
+• Total Recoveries: 1,567 times
+• Total Recovery Amount: $2,345,678.90
+• Active Users: 3,456 people
 
-或直接输入您的反馈内容...
+📈 Today's Data:
+• Detection Count: 234 times
+• Recovery Count: 45 times
+• New Users: 67 people
 ```
 
-### 获取帮助
+## 🔔 Notification Settings
+
+### Notification Types
+- **Detection Complete Notification**: Notify when address detection is complete
+- **Recovery Progress Notification**: Progress updates during recovery process
+- **Risk Warning Notification**: Warning when high-risk addresses are found
+- **System Maintenance Notification**: System maintenance and update notifications
+
+### Notification Configuration
 ```
-机器人: 🆘 帮助中心
+Bot: 🔔 Notification Settings
 
-📚 文档资源:
-• 快速开始指南
-• 功能使用教程  
-• 常见问题解答
-• 安全使用指南
+Current Settings:
+✅ Detection Complete Notification
+✅ Recovery Progress Notification
+✅ Risk Warning Notification
+❌ System Maintenance Notification
 
-🔗 外部资源:
-• 官方网站
-• 技术支持
-• 社区论坛
-• 更新日志
+[Modify Settings] [Restore Default]
+```
+
+## 💬 Feedback and Support
+
+### Feedback Function
+```
+Bot: 💬 Feedback
+
+Please select feedback type:
+[Feature Suggestion] [Problem Report] [User Experience] [Other]
+
+Or directly input your feedback content...
+```
+
+### Get Help
+```
+Bot: 🆘 Help Center
+
+📚 Documentation Resources:
+• Quick Start Guide
+• Function Usage Tutorial
+• Frequently Asked Questions
+• Security Usage Guide
+
+🔗 External Resources:
+• Official Website
+• Technical Support
+• Community Forum
+• Update Log
 ```
