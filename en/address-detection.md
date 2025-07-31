@@ -2,151 +2,151 @@
 
 Address detection is one of the core functions of Hyperliquid Recovery Bot, helping users quickly understand the asset situation in Hyperliquid addresses.
 
-## 🎯 功能概述
+## 🎯 Function Overview
 
-### 主要功能
-- **智能资产识别**: 自动识别现货和永续合约资产
-- **实时数据获取**: 使用 Hyperliquid 官方 API 获取最新数据
-- **风险等级评估**: 评估地址的安全风险等级
-- **价值计算**: 实时计算资产的 USD 价值
-- **可恢复性判断**: 判断资产是否可以通过机器人恢复
+### Main Features
+- **Smart Asset Recognition**: Automatically identify spot and perpetual contract assets
+- **Real-time Data Retrieval**: Use Hyperliquid official API to get latest data
+- **Risk Level Assessment**: Evaluate the security risk level of addresses
+- **Value Calculation**: Real-time calculation of asset USD value
+- **Recoverability Judgment**: Determine if assets can be recovered through the bot
 
-### 支持的资产类型
-- **现货资产 (Spot)**: USDC, ETH, BTC 等主流代币
-- **永续合约 (Perp)**: 永续合约持仓和保证金
-- **质押资产**: 质押在各种协议中的资产（部分支持）
+### Supported Asset Types
+- **Spot Assets**: USDC, ETH, BTC and other mainstream tokens
+- **Perpetual Contracts (Perp)**: Perpetual contract positions and margin
+- **Staked Assets**: Assets staked in various protocols (partial support)
 
-## 🚀 使用方法
+## 🚀 Usage Methods
 
-### 方法一：通过主菜单
-1. 发送 `/start` 命令打开主菜单
-2. 点击 **🔍 地址检测** 按钮
-3. 输入要检测的 Hyperliquid 地址
+### Method 1: Through Main Menu
+1. Send `/start` command to open main menu
+2. Click **🔍 Address Detection** button
+3. Enter the Hyperliquid address to detect
 
-### 方法二：直接命令
-1. 发送 `/detect` 命令
-2. 直接输入要检测的地址
+### Method 2: Direct Command
+1. Send `/detect` command
+2. Directly enter the address to detect
 
-### 方法三：快捷检测
-如果您之前已经检测过地址，可以：
-1. 在主菜单选择 **🔍 地址检测**
-2. 选择 **使用历史地址**
-3. 从列表中选择之前检测过的地址
+### Method 3: Quick Detection
+If you have previously detected addresses, you can:
+1. Select **🔍 Address Detection** in the main menu
+2. Choose **Use Historical Address**
+3. Select from the list of previously detected addresses
 
-## 📝 地址格式要求
+## 📝 Address Format Requirements
 
-### 有效地址格式
+### Valid Address Formats
 ```
-✅ 标准格式: 0x1234567890123456789012345678901234567890
-✅ 大小写混合: 0xAbCdEf1234567890123456789012345678901234
-✅ 全大写: 0X1234567890ABCDEF1234567890ABCDEF12345678
-✅ 全小写: 0x1234567890abcdef1234567890abcdef12345678
-```
-
-### 无效地址格式
-```
-❌ 缺少前缀: 1234567890123456789012345678901234567890
-❌ 长度不足: 0x12345
-❌ 长度过长: 0x1234567890123456789012345678901234567890123
-❌ 无效字符: 0x123456789012345678901234567890123456789G
-❌ 空格字符: 0x1234 5678 9012 3456 7890 1234 5678 9012 3456 7890
+✅ Standard format: 0x1234567890123456789012345678901234567890
+✅ Mixed case: 0xAbCdEf1234567890123456789012345678901234
+✅ All uppercase: 0X1234567890ABCDEF1234567890ABCDEF12345678
+✅ All lowercase: 0x1234567890abcdef1234567890abcdef12345678
 ```
 
-### 地址验证
-机器人会自动验证地址格式：
-- **长度检查**: 必须是 42 个字符（包含 0x 前缀）
-- **前缀检查**: 必须以 0x 或 0X 开头
-- **字符检查**: 只能包含 0-9 和 a-f（或 A-F）字符
-- **校验和验证**: 验证地址校验和（如果适用）
-
-## 🔍 检测过程详解
-
-### 1. 地址验证阶段
+### Invalid Address Formats
 ```
-🔍 正在验证地址格式...
-✅ 地址格式有效
-✅ 长度检查通过
-✅ 字符验证通过
+❌ Missing prefix: 1234567890123456789012345678901234567890
+❌ Insufficient length: 0x12345
+❌ Excessive length: 0x1234567890123456789012345678901234567890123
+❌ Invalid characters: 0x123456789012345678901234567890123456789G
+❌ Space characters: 0x1234 5678 9012 3456 7890 1234 5678 9012 3456 7890
 ```
 
-### 2. 数据获取阶段
+### Address Validation
+The bot automatically validates address format:
+- **Length Check**: Must be 42 characters (including 0x prefix)
+- **Prefix Check**: Must start with 0x or 0X
+- **Character Check**: Can only contain 0-9 and a-f (or A-F) characters
+- **Checksum Validation**: Verify address checksum (if applicable)
+
+## 🔍 Detection Process Details
+
+### 1. Address Validation Phase
 ```
-📡 连接 Hyperliquid API...
-🔄 获取账户信息...
-📊 查询现货资产...
-📈 查询永续合约...
-💰 获取价格数据...
+🔍 Validating address format...
+✅ Address format valid
+✅ Length check passed
+✅ Character validation passed
 ```
 
-### 3. 数据处理阶段
+### 2. Data Retrieval Phase
 ```
-🧮 计算资产价值...
-🔒 评估风险等级...
-📋 生成检测报告...
-✅ 检测完成
-```
-
-## 📊 检测结果解读
-
-### 基本信息
-```
-📍 地址: 0x1234...7890
-🔍 风险等级: 高风险
-💰 总价值: $1,234.56
-📊 资产种类: 3 种
-🛠️ 可恢复: 是
-⏰ 检测时间: 2024-01-15 14:30:25
+📡 Connecting to Hyperliquid API...
+🔄 Getting account information...
+📊 Querying spot assets...
+📈 Querying perpetual contracts...
+💰 Getting price data...
 ```
 
-### 现货资产详情
+### 3. Data Processing Phase
+```
+🧮 Calculating asset value...
+🔒 Evaluating risk level...
+📋 Generating detection report...
+✅ Detection completed
+```
+
+## 📊 Detection Result Interpretation
+
+### Basic Information
+```
+📍 Address: 0x1234...7890
+🔍 Risk Level: High Risk
+💰 Total Value: $1,234.56
+📊 Asset Types: 3 types
+🛠️ Recoverable: Yes
+⏰ Detection Time: 2024-01-15 14:30:25
+```
+
+### Spot Asset Details
 ```
 ┌─────────────────────────────────┐
-│ 现货资产 (Spot Account)          │
+│ Spot Assets (Spot Account)      │
 ├─────────────────────────────────┤
 │ USDC: 500.00 ($500.00)         │
 │ ETH: 0.5 ($734.56)             │
 │ BTC: 0.001 ($45.00)            │
-│ DOGE: 1000 (价格未知)            │
+│ DOGE: 1000 (Price Unknown)     │
 └─────────────────────────────────┘
 
-💡 说明:
-• 显示代币符号和数量
-• 括号内为 USD 价值
-• "价格未知" 表示暂时无法获取价格信息
+💡 Description:
+• Shows token symbol and quantity
+• USD value in parentheses
+• "Price Unknown" indicates temporarily unavailable price information
 ```
 
-### 永续合约详情
+### Perpetual Contract Details
 ```
 ┌─────────────────────────────────┐
-│ 永续合约 (Perp Account)          │
+│ Perpetual Contracts (Perp Account) │
 ├─────────────────────────────────┤
-│ USDC 保证金: 200.00 ($200.00)   │
-│ ETH-USD 持仓: 0.1 ETH           │
-│ BTC-USD 持仓: 0.005 BTC         │
-│ 未实现盈亏: +$15.50             │
+│ USDC Margin: 200.00 ($200.00)  │
+│ ETH-USD Position: 0.1 ETH       │
+│ BTC-USD Position: 0.005 BTC     │
+│ Unrealized PnL: +$15.50        │
 └─────────────────────────────────┘
 
-💡 说明:
-• 显示保证金余额
-• 显示各合约的持仓
-• 显示未实现盈亏
+💡 Description:
+• Shows margin balance
+• Shows positions for each contract
+• Shows unrealized profit and loss
 ```
 
-### 风险等级说明
+### Risk Level Description
 
-#### 🟢 低风险
-- **描述**: 地址未被任何风险数据库标记
-- **特征**: 正常的交易活动，无异常行为
-- **建议**: 可以正常使用 Hyperliquid 前端
-- **恢复需要**: 通常不需要使用恢复功能
+#### 🟢 Low Risk
+- **Description**: Address not flagged by any risk database
+- **Characteristics**: Normal trading activity, no abnormal behavior
+- **Recommendation**: Can use Hyperliquid frontend normally
+- **Recovery Need**: Usually no need to use recovery function
 
-#### 🟡 中等风险
-- **描述**: 地址有轻微的风险标记
-- **特征**: 可能有一些可疑的交易活动
-- **建议**: 谨慎操作，监控账户状态
-- **恢复需要**: 可能需要恢复功能
+#### 🟡 Medium Risk
+- **Description**: Address has minor risk flags
+- **Characteristics**: May have some suspicious trading activity
+- **Recommendation**: Operate cautiously, monitor account status
+- **Recovery Need**: May need recovery function
 
-#### 🔴 高风险
+#### 🔴 High Risk
 - **Description**: Address flagged as high risk
 - **Characteristics**: Cannot access Hyperliquid frontend interface
 - **Recommendation**: Use recovery function immediately to transfer assets
@@ -198,60 +198,60 @@ The bot saves your detection history:
 
 Recent Detections:
 1. 0x1234...7890 - 2024-01-15 14:30 (High Risk)
-2. 0x5678...1234 - 2024-01-14 10:15 (低风险)  
-3. 0x9abc...def0 - 2024-01-13 16:45 (中等风险)
+2. 0x5678...1234 - 2024-01-14 10:15 (Low Risk)
+3. 0x9abc...def0 - 2024-01-13 16:45 (Medium Risk)
 
-[查看详情] [重新检测] [删除记录]
+[View Details] [Re-detect] [Delete Record]
 ```
 
-### 历史数据用途
-- **快速重检**: 快速重新检测之前的地址
-- **趋势分析**: 观察地址风险等级变化
-- **资产监控**: 监控资产数量变化
-- **恢复决策**: 帮助决定是否需要恢复
+### Historical Data Usage
+- **Quick Re-check**: Quickly re-detect previously checked addresses
+- **Trend Analysis**: Observe changes in address risk levels
+- **Asset Monitoring**: Monitor changes in asset quantities
+- **Recovery Decision**: Help decide whether recovery is needed
 
-## ⚠️ 注意事项
+## ⚠️ Important Notes
 
-### 检测限制
-- **频率限制**: 每个用户每分钟最多检测 10 个地址
-- **并发限制**: 同时只能进行 1 个检测任务
-- **API 限制**: 受 Hyperliquid API 速率限制影响
+### Detection Limitations
+- **Frequency Limit**: Maximum 10 addresses per user per minute
+- **Concurrency Limit**: Only 1 detection task can run simultaneously
+- **API Limit**: Subject to Hyperliquid API rate limits
 
-### 数据准确性
-- **实时性**: 数据可能有 1-2 分钟的延迟
-- **价格波动**: 价格信息可能因市场波动而变化
-- **网络状况**: 网络问题可能影响数据准确性
+### Data Accuracy
+- **Real-time**: Data may have 1-2 minutes delay
+- **Price Volatility**: Price information may change due to market volatility
+- **Network Conditions**: Network issues may affect data accuracy
 
-### 隐私保护
-- **地址隐私**: 检测的地址信息会被临时存储
-- **数据清理**: 定期清理过期的检测数据
-- **匿名化**: 不会关联用户身份信息
+### Privacy Protection
+- **Address Privacy**: Detected address information is temporarily stored
+- **Data Cleanup**: Regularly clean expired detection data
+- **Anonymization**: No association with user identity information
 
-## 🆘 常见问题
+## 🆘 Frequently Asked Questions
 
-### Q: 检测失败怎么办？
-A: 请检查：
-1. 地址格式是否正确
-2. 网络连接是否正常
-3. 是否超过检测频率限制
-4. 稍后重试或联系技术支持
+### Q: What to do if detection fails?
+A: Please check:
+1. Whether the address format is correct
+2. Whether the network connection is normal
+3. Whether detection frequency limit is exceeded
+4. Try again later or contact technical support
 
-### Q: 为什么某些资产没有价格？
-A: 可能原因：
-1. 新上线的代币暂无价格数据
-2. 流动性较低的代币
-3. 价格 API 暂时不可用
-4. 代币已经下线或停止交易
+### Q: Why do some assets have no price?
+A: Possible reasons:
+1. Newly listed tokens have no price data yet
+2. Low liquidity tokens
+3. Price API temporarily unavailable
+4. Token has been delisted or stopped trading
 
-### Q: 风险等级是如何判断的？
-A: 基于多个因素：
-1. 第三方风险数据库
-2. 交易行为分析
-3. 地址活动模式
-4. 社区举报信息
+### Q: How is the risk level determined?
+A: Based on multiple factors:
+1. Third-party risk databases
+2. Trading behavior analysis
+3. Address activity patterns
+4. Community reports
 
-### Q: 检测结果可以导出吗？
-A: 目前支持：
-1. 复制检测结果文本
-2. 生成检测报告截图
-3. 导出功能正在开发中
+### Q: Can detection results be exported?
+A: Currently supports:
+1. Copy detection result text
+2. Generate detection report screenshots
+3. Export function is under development
