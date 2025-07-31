@@ -12,8 +12,8 @@ Please select your preferred language to continue:
 
 ### 📖 Available Languages / 可用语言
 
-- **🇺🇸 [English](en/)** - Complete English documentation
-- **🇨🇳 [中文](zh/)** - 完整的中文文档
+- **🇺🇸 [English](en/README.md)** - Complete English documentation
+- **🇨🇳 [中文](zh/README.md)** - 完整的中文文档
 
 ## 🤖 About Hyperliquid Recovery Bot
 

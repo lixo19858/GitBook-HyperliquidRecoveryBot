@@ -3,7 +3,8 @@
   "description": "Complete user guide for Hyperliquid Recovery Bot, helping users safely recover digital assets from high-risk flagged addresses",
   "author": "Hyperliquid Recovery Team",
   "language": "en",
-  "gitbook": "3.2.3",
+  "gitbook": ">=3.0.0",
+  "root": ".",
   "structure": {
     "readme": "README.md",
     "summary": "SUMMARY.md",
