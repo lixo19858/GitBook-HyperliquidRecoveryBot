@@ -164,41 +164,41 @@ Step 5/5: Cleanup and confirmation
 🎉 Recovery operation complete!
 ```
 
-#### 步骤 8: 恢复结果
+#### Step 8: Recovery Results
 ```
-✅ 资产恢复成功！
+✅ Asset recovery successful!
 
-📊 恢复摘要:
+📊 Recovery Summary:
 ┌─────────────────────────────────┐
-│ 恢复详情                         │
+│ Recovery Details                │
 ├─────────────────────────────────┤
-│ 源地址: 0x1234...7890           │
-│ 目标地址: 0x5678...1234         │
-│ 恢复时间: 2024-01-15 14:35:42   │
-│ 执行时长: 4 分 23 秒             │
+│ Source Address: 0x1234...7890   │
+│ Target Address: 0x5678...1234   │
+│ Recovery Time: 2024-01-15 14:35:42 │
+│ Execution Duration: 4 min 23 sec │
 └─────────────────────────────────┘
 
-💰 恢复资产明细:
-• USDC: 708.02 (原 715.50 - 服务费 7.48)
-• ETH: 0.6 (原 0.5 + 平仓收益 0.1)
+💰 Recovered Asset Details:
+• USDC: 708.02 (original 715.50 - service fee 7.48)
+• ETH: 0.6 (original 0.5 + position closing profit 0.1)
 • BTC: 0.001
 
-🧾 费用明细:
-• 总资产价值: $1,495.06
-• 服务费率: 0.5%
-• 服务费金额: $7.48
-• 网络手续费: 已包含在服务费中
+🧾 Fee Details:
+• Total Asset Value: $1,495.06
+• Service Fee Rate: 0.5%
+• Service Fee Amount: $7.48
+• Network Transaction Fees: Included in service fee
 
-🔗 交易记录:
-• USDC 提现: 0xabc...123 ✅ 已确认
-• ETH 提现: 0xdef...456 ✅ 已确认  
-• BTC 提现: 0x789...abc ✅ 已确认
+🔗 Transaction Records:
+• USDC Withdrawal: 0xabc...123 ✅ Confirmed
+• ETH Withdrawal: 0xdef...456 ✅ Confirmed
+• BTC Withdrawal: 0x789...abc ✅ Confirmed
 
-📱 后续操作:
-[查看目标地址] [下载恢复报告] [返回主菜单]
+📱 Follow-up Operations:
+[View Target Address] [Download Recovery Report] [Return to Main Menu]
 
-感谢使用 Hyperliquid Recovery Bot！
-您的资产已安全转移到新地址。
+Thank you for using Hyperliquid Recovery Bot!
+Your assets have been safely transferred to the new address.
 ```
 
 ## 💰 Fee Structure Details

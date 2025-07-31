@@ -1,202 +1,202 @@
-# 快速开始
+# Quick Start
 
-欢迎使用 Hyperliquid Recovery Bot！本指南将帮助您快速上手，从第一次使用到完成资产恢复。
+Welcome to Hyperliquid Recovery Bot! This guide will help you get started quickly, from first use to completing asset recovery.
 
-## 🚀 第一步：访问机器人
+## 🚀 Step 1: Access the Bot
 
-### 1. 打开 Telegram
-确保您已经安装并登录了 Telegram 应用。
+### 1. Open Telegram
+Make sure you have installed and logged into the Telegram app.
 
-### 2. 访问机器人
-有两种方式访问机器人：
+### 2. Access the Bot
+There are two ways to access the bot:
 
-**方式一：直接链接**
-点击以下链接直接访问：
+**Method 1: Direct Link**
+Click the following link to access directly:
 [https://t.me/HyperliquidRecoveryBot](https://t.me/HyperliquidRecoveryBot)
 
-**方式二：搜索机器人**
-在 Telegram 搜索框中输入：`@HyperliquidRecoveryBot`
+**Method 2: Search for Bot**
+Enter in Telegram search box: `@HyperliquidRecoveryBot`
 
-### 3. 启动机器人
-点击 **"开始"** 按钮或发送 `/start` 命令来启动机器人。
+### 3. Start the Bot
+Click the **"Start"** button or send `/start` command to start the bot.
 
-## 📱 主界面介绍
+## 📱 Main Interface Introduction
 
-启动后，您将看到简洁的主菜单界面：
+After starting, you will see a clean main menu interface:
 
 ```
 🤖 Hyperliquid Recovery Bot
 
-欢迎使用 Hyperliquid 资产恢复机器人！
+Welcome to Hyperliquid Asset Recovery Bot!
 
-🔍 地址检测 - 智能检测Hyperliquid地址中的所有资产类型
-🛠️ 资产恢复 - 一键恢复：自动转换、转账、提现
+🔍 Address Detection - Smart detection of all asset types in Hyperliquid addresses
+🛠️ Asset Recovery - One-click recovery: automatic conversion, transfer, withdrawal
 
-可用命令：
-/start - 显示主菜单
-/detect - 直接进入地址检测  
-/recovery - 直接进入资产恢复
+Available commands:
+/start - Show main menu
+/detect - Enter address detection directly
+/recovery - Enter asset recovery directly
 ```
 
-### 主要功能按钮
+### Main Function Buttons
 
-1. **🔍 地址检测**
-   - 快速查询 Hyperliquid 地址中的所有资产
-   - 显示资产类型、数量和价值
-   - 识别可恢复的资产
+1. **🔍 Address Detection**
+   - Quickly query all assets in Hyperliquid addresses
+   - Display asset types, quantities and values
+   - Identify recoverable assets
 
-2. **🛠️ 资产恢复**
-   - 一键恢复解决方案
-   - 自动转换、转账、提现流程
-   - 透明的费用结构
+2. **🛠️ Asset Recovery**
+   - One-click recovery solution
+   - Automatic conversion, transfer, withdrawal process
+   - Transparent fee structure
 
-## 🔍 地址检测功能
+## 🔍 Address Detection Function
 
-### 使用步骤
+### Usage Steps
 
-1. **进入检测功能**
-   - 点击主菜单中的 **🔍 地址检测** 按钮
-   - 或发送 `/detect` 命令
+1. **Enter Detection Function**
+   - Click the **🔍 Address Detection** button in the main menu
+   - Or send `/detect` command
 
-2. **输入地址**
-   - 机器人会提示您输入要检测的 Hyperliquid 地址
-   - 输入完整的地址（42字符，以0x开头）
-   - 例如：`0x1234567890123456789012345678901234567890`
+2. **Input Address**
+   - The bot will prompt you to enter the Hyperliquid address to detect
+   - Enter the complete address (42 characters, starting with 0x)
+   - Example: `0x1234567890123456789012345678901234567890`
 
-3. **等待检测**
-   - 机器人会显示检测进度
-   - 通常需要几秒到几分钟时间
+3. **Wait for Detection**
+   - The bot will display detection progress
+   - Usually takes a few seconds to a few minutes
 
-4. **查看结果**
-   - 检测完成后会显示详细的资产信息
-   - 包括资产类型、数量、价值等
+4. **View Results**
+   - After detection is complete, detailed asset information will be displayed
+   - Including asset types, quantities, values, etc.
 
-### 检测结果示例
+### Detection Result Example
 
 ```
-✅ 检测完成
+✅ Detection Complete
 
-📍 地址: 0x1234...7890
-🔍 风险等级: 高风险
-💰 总价值: $1,234.56
+📍 Address: 0x1234...7890
+🔍 Risk Level: High Risk
+💰 Total Value: $1,234.56
 
-📊 资产详情:
+📊 Asset Details:
 ┌─────────────────────────────────┐
-│ 现货资产 (Spot)                  │
+│ Spot Assets (Spot)              │
 ├─────────────────────────────────┤
 │ USDC: 500.00 ($500.00)         │
 │ ETH: 0.5 ($734.56)             │
 └─────────────────────────────────┘
 
 ┌─────────────────────────────────┐
-│ 永续合约 (Perp)                  │
+│ Perpetual Contracts (Perp)     │
 ├─────────────────────────────────┤
-│ 暂无永续合约资产                  │
+│ No perpetual contract assets    │
 └─────────────────────────────────┘
 
-🛠️ 可恢复资产: 是
-💡 建议: 该地址包含可恢复资产，建议使用资产恢复功能
+🛠️ Recoverable Assets: Yes
+💡 Suggestion: This address contains recoverable assets, recommend using asset recovery function
 ```
 
-## 🛠️ 资产恢复功能
+## 🛠️ Asset Recovery Function
 
-### 使用步骤
+### Usage Steps
 
-1. **进入恢复功能**
-   - 点击主菜单中的 **🛠️ 资产恢复** 按钮
-   - 或发送 `/recovery` 命令
+1. **Enter Recovery Function**
+   - Click the **🛠️ Asset Recovery** button in the main menu
+   - Or send `/recovery` command
 
-2. **输入地址**
-   - 输入需要恢复资产的 Hyperliquid 地址
-   - 系统会自动检测该地址的资产情况
+2. **Input Address**
+   - Enter the Hyperliquid address that needs asset recovery
+   - The system will automatically detect the asset situation of this address
 
-3. **提供私钥**
-   - 输入该地址对应的私钥（不包含0x前缀）
-   - ⚠️ 私钥仅用于恢复操作，操作完成后会自动清理
+3. **Provide Private Key**
+   - Enter the private key corresponding to this address (without 0x prefix)
+   - ⚠️ Private key is only used for recovery operations and will be automatically cleaned after completion
 
-4. **确认恢复计划**
-   - 系统会分析资产并制定恢复计划
-   - 显示恢复步骤、预估费用等信息
-   - 确认后开始执行恢复
+4. **Confirm Recovery Plan**
+   - The system will analyze assets and formulate a recovery plan
+   - Display recovery steps, estimated fees and other information
+   - Start executing recovery after confirmation
 
-5. **等待完成**
-   - 系统会自动执行恢复步骤
-   - 实时显示进度和状态
-   - 完成后显示恢复结果
+5. **Wait for Completion**
+   - The system will automatically execute recovery steps
+   - Display progress and status in real time
+   - Show recovery results after completion
 
-### 恢复流程示例
+### Recovery Process Example
 
 ```
-🛠️ 资产恢复计划
+🛠️ Asset Recovery Plan
 
-📍 源地址: 0x1234...7890
-💰 总资产价值: $1,234.56
+📍 Source Address: 0x1234...7890
+💰 Total Asset Value: $1,234.56
 
-📋 恢复步骤:
-1. ✅ 资产分析完成
-2. 🔄 转换永续合约资产为现货资产
-3. 🔄 提现所有资产到安全地址
-4. 🔄 收取服务费 (0.5% = $6.17)
+📋 Recovery Steps:
+1. ✅ Asset analysis complete
+2. 🔄 Convert perpetual contract assets to spot assets
+3. 🔄 Withdraw all assets to safe address
+4. 🔄 Collect service fee (0.5% = $6.17)
 
-💡 预估完成时间: 2-5分钟
-⚠️ 请确认后开始恢复操作
+💡 Estimated completion time: 2-5 minutes
+⚠️ Please confirm to start recovery operation
 
-[确认恢复] [取消操作]
+[Confirm Recovery] [Cancel Operation]
 ```
 
-## 💰 费用说明
+## 💰 Fee Description
 
-### 服务费结构
-- **费率**: 按恢复金额的 0.5% 收取
-- **最低费用**: 1 USDC
-- **最高费用**: 100,000,000 USDC
-- **计费方式**: 从恢复的资产中自动扣除
+### Service Fee Structure
+- **Rate**: 0.5% of recovery amount
+- **Minimum Fee**: 1 USDC
+- **Maximum Fee**: 100,000,000 USDC
+- **Billing Method**: Automatically deducted from recovered assets
 
-### 费用示例
-- 恢复金额 $100 → 服务费 $1.00 (最低费用)
-- 恢复金额 $1,000 → 服务费 $5.00
-- 恢复金额 $10,000 → 服务费 $50.00
+### Fee Examples
+- Recovery amount $100 → Service fee $1.00 (minimum fee)
+- Recovery amount $1,000 → Service fee $5.00
+- Recovery amount $10,000 → Service fee $50.00
 
-## 🌐 语言设置
+## 🌐 Language Settings
 
-机器人支持多语言界面：
+The bot supports multilingual interface:
 
-### 支持的语言
-- **中文**: 完整的简体中文支持
+### Supported Languages
+- **Chinese**: Complete Simplified Chinese support
 - **English**: Full English language support
 
-### 切换语言
-目前机器人默认使用英文界面。语言切换功能正在开发中。
+### Switch Language
+Currently the bot uses English interface by default. Language switching function is under development.
 
-## ⚠️ 重要提示
+## ⚠️ Important Notes
 
-### 安全注意事项
-1. **私钥安全**: 
-   - 仅在恢复时提供私钥
-   - 私钥会在操作完成后自动清理
-   - 不要在其他地方泄露私钥
+### Security Precautions
+1. **Private Key Security**:
+   - Only provide private key during recovery
+   - Private key will be automatically cleaned after operation completion
+   - Do not leak private key elsewhere
 
-2. **地址验证**:
-   - 确保输入的地址格式正确
-   - 确认地址确实属于您
+2. **Address Verification**:
+   - Ensure the entered address format is correct
+   - Confirm the address indeed belongs to you
 
-3. **网络安全**:
-   - 使用安全的网络环境
-   - 避免在公共网络下操作
+3. **Network Security**:
+   - Use secure network environment
+   - Avoid operating on public networks
 
-### 操作建议
-1. **小额测试**: 首次使用建议先用小额资产测试
-2. **备份重要信息**: 记录重要的交易信息
-3. **及时联系**: 遇到问题及时联系技术支持
+### Operation Suggestions
+1. **Small Amount Testing**: Recommend testing with small amounts for first use
+2. **Backup Important Information**: Record important transaction information
+3. **Contact Promptly**: Contact technical support promptly when encountering problems
 
-## 🆘 获取帮助
+## 🆘 Get Help
 
-如果您在使用过程中遇到任何问题：
+If you encounter any problems during use:
 
-1. **查看常见问题**: [FAQ 页面](faq.md)
-2. **联系技术支持**: 通过机器人内的反馈功能
+1. **View FAQ**: [FAQ Page](faq.md)
+2. **Contact Technical Support**: Through the feedback function within the bot
 
-## 🎯 下一步
+## 🎯 Next Steps
 
-- 了解更多功能: [机器人使用详解](bot-usage.md)
-- 查看常见问题: [FAQ](faq.md)
+- Learn more features: [Bot Usage Guide](bot-usage.md)
+- View FAQ: [FAQ](faq.md)
