@@ -1,0 +1,75 @@
+{
+  "title": "Hyperliquid Recovery Bot User Guide",
+  "description": "Complete user guide for Hyperliquid Recovery Bot, helping users safely recover digital assets from high-risk flagged addresses",
+  "author": "Hyperliquid Recovery Team",
+  "language": "en",
+  "gitbook": "3.2.3",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md",
+    "langs": "LANGS.md"
+  },
+  "plugins": [
+    "theme-default",
+    "search",
+    "sharing",
+    "fontsettings",
+    "highlight",
+    "copy-code-button",
+    "expandable-chapters",
+    "back-to-top-button",
+    "chapter-fold",
+    "code",
+    "splitter",
+    "page-toc-button",
+    "anchor-navigation-ex"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+    "sharing": {
+      "facebook": false,
+      "twitter": false,
+      "google": false,
+      "weibo": false,
+      "instapaper": false,
+      "vk": false,
+      "all": [
+        "facebook", "google", "twitter",
+        "weibo", "instapaper"
+      ]
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "associatedWithSummary": true,
+      "printLog": false,
+      "multipleH1": true,
+      "mode": "float",
+      "showGoTop": true,
+      "float": {
+        "floatIcon": "fa fa-navicon",
+        "showLevelIcon": false,
+        "level1Icon": "fa fa-hand-o-right",
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
+      },
+      "pageTop": {
+        "showLevelIcon": false,
+        "level1Icon": "fa fa-hand-o-right",
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
+      }
+    }
+  },
+  "variables": {
+    "botUrl": "https://t.me/HyperliquidRecoveryBot",
+    "version": "1.0.0",
+    "supportEmail": "support@hyperliquid-recovery.com"
+  }
+}
