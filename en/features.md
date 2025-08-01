@@ -64,13 +64,11 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 ### Fee Calculation
 - **Base Rate**: 0.5% (calculated based on total recovered asset value)
 - **Minimum Fee**: 1 USDC
-- **Maximum Fee**: 100,000,000 USDC
 - **Calculation Formula**: `Service Fee = max(Recovery Amount × 0.5%, 1 USDC)`
 
 ### Fee Includes
 - **Recovery Service**: Complete asset recovery operations
 - **Network Fees**: All blockchain transaction fees
-- **Technical Support**: Professional technical support and troubleshooting
 - **Risk Guarantee**: Operation risk guarantee and insurance
 
 ### Charging Method
@@ -159,8 +157,6 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 ### Help Support
 - **Built-in Help**: Built-in help and instructions within the bot
 - **FAQ**: Complete FAQ and problem solutions
-- **Technical Support**: 24/7 technical support service
-- **User Feedback**: Convenient feedback and suggestion channels
 
 ## 🚀 Performance Features
 
