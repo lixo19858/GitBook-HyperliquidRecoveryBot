@@ -159,8 +159,8 @@ The bot determines if assets are recoverable based on:
    - ❌ Total value < $5.00: Below minimum threshold
 
 2. **Asset Types Supported**:
-   - ✅ Spot assets: Directly recoverable
-   - ✅ Perp margin: Recoverable after position closure
+   - ✅ Spot assets: Recoverable (converted to USDC, transferred to perp account, then withdrawn)
+   - ✅ Perp margin: Recoverable (positions closed, margin withdrawn from perp account)
    - ✅ Vault assets: Recoverable (may require withdrawal from vault)
    - ✅ Staked assets: Recoverable (may require unstaking)
 
@@ -257,7 +257,7 @@ A: Risk level is determined by:
 ### Q: What does "recoverable" mean?
 A: An address is considered recoverable if:
 1. **Minimum Value**: Total asset value ≥ $5.00
-2. **Supported Assets**: Contains spot, perp, vault, or staked assets
+2. **Supported Assets**: Contains spot, perp, vault, or staked assets (all withdrawn via perp account)
 3. **Technical Access**: Address is accessible via Hyperliquid API
 
 ### Q: Can I detect the same address multiple times?
