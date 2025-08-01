@@ -16,10 +16,13 @@ The bot helps users recover assets by directly calling Hyperliquid API to perfor
 6. **Automated Fee Settlement**: Seamless deduction of service fees during the withdrawal transaction
 
 ### Supported Asset Types
-- **Spot Assets**: Direct conversion and withdrawal of spot account assets
-- **Perpetual Contract Assets**: Close positions and transfer margin to spot
+- **Spot Assets**: Convert to USDC and transfer to perp account for withdrawal
+- **Perpetual Contract Assets**: Close positions, margin remains in perp account for withdrawal
 - **Vault Assets**: Withdrawal from Hyperliquid vaults (if supported)
 - **Staked Assets**: Unstaking and recovery (if supported)
+
+### Important Note
+**All withdrawals must be executed from the perpetual contract (perp) account.** Spot assets cannot be directly withdrawn and must first be converted to USDC and transferred to the perp account.
 
 ## 🚀 Usage Methods
 
@@ -310,6 +313,7 @@ The bot follows a standardized recovery process:
 ### Supported Networks
 - **Source**: Hyperliquid (mainnet or testnet)
 - **Destination**: Arbitrum One (for mainnet) or Arbitrum Sepolia (for testnet)
+- **Withdrawal Account**: Perpetual contract account only
 - **Asset**: USDC only (all assets converted to USDC before withdrawal)
 
 ### Error Handling
