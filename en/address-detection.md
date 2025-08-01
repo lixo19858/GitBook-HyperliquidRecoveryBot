@@ -5,16 +5,17 @@ Address detection is one of the core functions of Hyperliquid Recovery Bot, help
 ## 🎯 Function Overview
 
 ### Main Features
-- **Smart Asset Recognition**: Automatically identify spot and perpetual contract assets
-- **Real-time Data Retrieval**: Use Hyperliquid official API to get latest data
-- **Risk Level Assessment**: Evaluate the security risk level of addresses
-- **Value Calculation**: Real-time calculation of asset USD value
-- **Recoverability Judgment**: Determine if assets can be recovered through the bot
+- **Real-time Asset Detection**: Use Hyperliquid official API to get latest asset data
+- **Multi-Account Support**: Detect assets across Spot, Perp, Vault, and Staked accounts
+- **USD Value Calculation**: Real-time calculation of asset USD value using market prices
+- **Risk Level Assessment**: Simple risk assessment based on total asset value
+- **Recovery Assessment**: Determine if assets meet minimum recovery thresholds
 
 ### Supported Asset Types
-- **Spot Assets**: USDC, ETH, BTC and other mainstream tokens
-- **Perpetual Contracts (Perp)**: Perpetual contract positions and margin
-- **Staked Assets**: Assets staked in various protocols (partial support)
+- **Spot Assets**: USDC, ETH, BTC and other tokens in spot account
+- **Perpetual Contracts (Perp)**: Margin balances and positions in perp account
+- **Vault Assets**: Assets deposited in Hyperliquid vaults
+- **Staked Assets**: Assets staked in various protocols
 
 ## 🚀 Usage Methods
 
@@ -27,15 +28,16 @@ Address detection is one of the core functions of Hyperliquid Recovery Bot, help
 1. Send `/detect` command
 2. Directly enter the address to detect
 
-### Method 3: Quick Detection
-If you have previously detected addresses, you can:
-1. Select **🔍 Address Detection** in the main menu
-2. Choose **Use Historical Address**
-3. Select from the list of previously detected addresses
+### Method 3: From Wallet Management
+If you have imported wallets, you can:
+1. Go to **💼 Wallet Management**
+2. Select a wallet and click **View Details**
+3. Click **🔍 Detect Assets** to check current balance
 
 ## 📝 Address Format Requirements
 
 ### Valid Address Formats
+Hyperliquid uses Ethereum-compatible addresses:
 ```
 ✅ Standard format: 0x1234567890123456789012345678901234567890
 ✅ Mixed case: 0xAbCdEf1234567890123456789012345678901234
@@ -53,35 +55,37 @@ If you have previously detected addresses, you can:
 ```
 
 ### Address Validation
-The bot automatically validates address format:
-- **Length Check**: Must be 42 characters (including 0x prefix)
+The bot automatically validates address format using viem library:
+- **Length Check**: Must be exactly 42 characters (including 0x prefix)
 - **Prefix Check**: Must start with 0x or 0X
 - **Character Check**: Can only contain 0-9 and a-f (or A-F) characters
-- **Checksum Validation**: Verify address checksum (if applicable)
+- **Checksum Validation**: Validates Ethereum address checksum
 
 ## 🔍 Detection Process Details
 
 ### 1. Address Validation Phase
 ```
 🔍 Validating address format...
-✅ Address format valid
-✅ Length check passed
-✅ Character validation passed
+✅ Address format valid (using viem library)
+✅ Length check passed (42 characters)
+✅ Checksum validation passed
 ```
 
 ### 2. Data Retrieval Phase
 ```
 📡 Connecting to Hyperliquid API...
-🔄 Getting account information...
-📊 Querying spot assets...
-📈 Querying perpetual contracts...
-💰 Getting price data...
+🔄 Getting market prices for USD valuation...
+📊 Querying spot account state...
+📈 Querying perpetual contracts state...
+🏦 Querying vault assets...
+🔒 Querying staked assets...
 ```
 
 ### 3. Data Processing Phase
 ```
-🧮 Calculating asset value...
-🔒 Evaluating risk level...
+🧮 Calculating USD values using market prices...
+📊 Processing asset balances across all accounts...
+🔒 Evaluating risk level based on total value...
 📋 Generating detection report...
 ✅ Detection completed
 ```
@@ -91,167 +95,174 @@ The bot automatically validates address format:
 ### Basic Information
 ```
 📍 Address: 0x1234...7890
-🔍 Risk Level: High Risk
+🔍 Risk Level: Medium Risk
 💰 Total Value: $1,234.56
-📊 Asset Types: 3 types
-🛠️ Recoverable: Yes
+📊 Asset Count: 5 assets
+🛠️ Recoverable: Yes (above $0.01 threshold)
 ⏰ Detection Time: 2024-01-15 14:30:25
 ```
 
-### Spot Asset Details
-```
-┌─────────────────────────────────┐
-│ Spot Assets (Spot Account)      │
-├─────────────────────────────────┤
-│ USDC: 500.00 ($500.00)         │
-│ ETH: 0.5 ($734.56)             │
-│ BTC: 0.001 ($45.00)            │
-│ DOGE: 1000 (Price Unknown)     │
-└─────────────────────────────────┘
+### Asset Display Format
+Assets are displayed with the following information:
+- **Token Symbol**: The asset's symbol (e.g., USDC, ETH)
+- **Account Type**: [SPOT], [PERP], [VAULT], or [STAKED]
+- **Balance**: Precise token amount
+- **USD Value**: Current market value (if price available)
 
-💡 Description:
-• Shows token symbol and quantity
-• USD value in parentheses
-• "Price Unknown" indicates temporarily unavailable price information
+### Example Asset Display
 ```
+💰 Assets Found:
 
-### Perpetual Contract Details
-```
-┌─────────────────────────────────┐
-│ Perpetual Contracts (Perp Account) │
-├─────────────────────────────────┤
-│ USDC Margin: 200.00 ($200.00)  │
-│ ETH-USD Position: 0.1 ETH       │
-│ BTC-USD Position: 0.005 BTC     │
-│ Unrealized PnL: +$15.50        │
-└─────────────────────────────────┘
+[SPOT] USDC: 500.00 ($500.00)
+[SPOT] ETH: 0.5 ($734.56)
+[PERP] USDC: 200.00 ($200.00)
+[VAULT] BTC: 0.001 ($45.00)
+[STAKED] DOGE: 1000 (Price Unknown)
 
-💡 Description:
-• Shows margin balance
-• Shows positions for each contract
-• Shows unrealized profit and loss
+💡 Notes:
+• [SPOT] = Spot account assets
+• [PERP] = Perpetual contract account assets
+• [VAULT] = Vault deposited assets
+• [STAKED] = Staked assets
+• "Price Unknown" = Market price temporarily unavailable
 ```
 
 ### Risk Level Description
 
+The risk level is calculated based on total asset value and asset count:
+
 #### 🟢 Low Risk
-- **Description**: Address not flagged by any risk database
-- **Characteristics**: Normal trading activity, no abnormal behavior
-- **Recommendation**: Can use Hyperliquid frontend normally
-- **Recovery Need**: Usually no need to use recovery function
+- **Criteria**: Total value < $1,000 AND asset count ≤ 5
+- **Description**: Small portfolio with limited assets
+- **Characteristics**: Lower complexity for recovery operations
+- **Recommendation**: Standard recovery procedures apply
 
 #### 🟡 Medium Risk
-- **Description**: Address has minor risk flags
-- **Characteristics**: May have some suspicious trading activity
-- **Recommendation**: Operate cautiously, monitor account status
-- **Recovery Need**: May need recovery function
+- **Criteria**: Total value $1,000-$10,000 OR asset count 6-10
+- **Description**: Medium-sized portfolio requiring careful handling
+- **Characteristics**: May involve multiple asset types and conversions
+- **Recommendation**: Review recovery plan carefully before execution
 
 #### 🔴 High Risk
-- **Description**: Address flagged as high risk
-- **Characteristics**: Cannot access Hyperliquid frontend interface
-- **Recommendation**: Use recovery function immediately to transfer assets
-- **Recovery Need**: Strongly recommend using recovery function
+- **Criteria**: Total value > $10,000 OR asset count > 10
+- **Description**: Large portfolio requiring extra caution
+- **Characteristics**: Complex recovery with multiple steps and higher fees
+- **Recommendation**: Consider batch recovery or professional assistance
 
 ## 💡 Detection Result Analysis
 
-### Recoverability Judgment
-The bot determines if assets are recoverable based on the following factors:
+### Recoverability Assessment
+The bot determines if assets are recoverable based on:
 
-1. **Asset Type**:
-   - ✅ Spot assets: Usually recoverable
-   - ✅ Perpetual contract margin: Recoverable
-   - ⚠️ Active positions: Need to close positions first
+1. **Minimum Value Threshold**:
+   - ✅ Total value ≥ $0.01: Considered recoverable
+   - ❌ Total value < $0.01: Below minimum threshold
 
-2. **Asset Quantity**:
-   - ✅ Quantity > 0: Recoverable
-   - ❌ Quantity = 0: No need for recovery
+2. **Asset Types Supported**:
+   - ✅ Spot assets: Directly recoverable
+   - ✅ Perp margin: Recoverable after position closure
+   - ✅ Vault assets: Recoverable (may require withdrawal from vault)
+   - ✅ Staked assets: Recoverable (may require unstaking)
 
-3. **Network Status**:
-   - ✅ Network normal: Recoverable
-   - ❌ Network abnormal: Temporarily unable to recover
+3. **Technical Feasibility**:
+   - ✅ Valid address format: Required for all operations
+   - ✅ API accessibility: Hyperliquid API must be responsive
+   - ✅ Network status: Blockchain network must be operational
 
-### Value Calculation Description
-- **Real-time Price**: Use Hyperliquid API to get real-time prices
-- **Price Source**: Mainly from Hyperliquid internal prices
-- **Update Frequency**: Get latest prices for each detection
-- **Missing Prices**: Some new tokens may temporarily have no price information
+### USD Value Calculation
+- **Price Source**: Hyperliquid API market data (`getAllMids()`)
+- **Update Frequency**: Real-time prices fetched for each detection
+- **Calculation Method**: `token_balance × current_market_price`
+- **Missing Prices**: Displayed as "Price Unknown" when market data unavailable
+- **Precision**: Values displayed with appropriate decimal places
 
-## 🔄 Re-detection
+## 🔄 Re-detection and Updates
 
 ### When Re-detection is Needed
-- **Asset Changes**: When address assets change
-- **Price Updates**: When latest price information is needed
-- **Risk Status**: Check if risk status has changed
-- **Regular Monitoring**: Regularly monitor address status
+- **Asset Changes**: After trading or transferring assets
+- **Price Updates**: When current market prices are needed
+- **Recovery Planning**: Before starting asset recovery operations
+- **Portfolio Monitoring**: Regular monitoring of asset values
 
 ### Re-detection Methods
-1. **Quick Re-check**: Click **🔄 Re-detect** on detection result page
-2. **Complete Re-check**: Re-enter address for complete detection
-3. **Batch Re-check**: Batch re-detection for multiple addresses
+1. **From Detection Results**: Click **🔄 Re-detect** button
+2. **New Detection**: Enter the same address again for fresh detection
+3. **From Wallet Details**: Use wallet management interface for imported wallets
 
-## 📈 History Records
+## 📊 Technical Implementation
 
-### Detection History
-The bot saves your detection history:
-```
-📚 Detection History
+### API Integration
+- **Hyperliquid SDK**: Uses official Hyperliquid JavaScript SDK
+- **Parallel Queries**: Fetches spot, perp, vault, and staked data simultaneously
+- **Error Handling**: Graceful handling of API failures and timeouts
+- **Rate Limiting**: Respects Hyperliquid API rate limits
 
-Recent Detections:
-1. 0x1234...7890 - 2024-01-15 14:30 (High Risk)
-2. 0x5678...1234 - 2024-01-14 10:15 (Low Risk)
-3. 0x9abc...def0 - 2024-01-13 16:45 (Medium Risk)
+### Data Processing
+- **Asset Aggregation**: Combines data from multiple account types
+- **Price Matching**: Matches assets with current market prices
+- **Value Calculation**: Computes USD values with proper precision
+- **Risk Assessment**: Simple algorithm based on portfolio size
 
-[View Details] [Re-detect] [Delete Record]
-```
-
-### Historical Data Usage
-- **Quick Re-check**: Quickly re-detect previously checked addresses
-- **Trend Analysis**: Observe changes in address risk levels
-- **Asset Monitoring**: Monitor changes in asset quantities
-- **Recovery Decision**: Help decide whether recovery is needed
+### Performance Optimization
+- **Batch Price Fetching**: Gets all market prices in single API call
+- **Concurrent Requests**: Parallel processing of different account types
+- **Caching**: Price data cached for 30 seconds to reduce API calls
+- **Timeout Handling**: 30-second timeout for API requests
 
 ## ⚠️ Important Notes
 
-### Detection Limitations
-- **Frequency Limit**: Maximum 10 addresses per user per minute
-- **Concurrency Limit**: Only 1 detection task can run simultaneously
-- **API Limit**: Subject to Hyperliquid API rate limits
+### Technical Limitations
+- **API Dependency**: Requires Hyperliquid API to be operational
+- **Network Requirements**: Stable internet connection needed
+- **Rate Limits**: Subject to Hyperliquid API rate limiting
+- **Testnet Support**: Configurable for testnet or mainnet
 
 ### Data Accuracy
-- **Real-time**: Data may have 1-2 minutes delay
-- **Price Volatility**: Price information may change due to market volatility
-- **Network Conditions**: Network issues may affect data accuracy
+- **Real-time Prices**: Market prices updated with each detection
+- **Balance Precision**: Uses full precision from Hyperliquid API
+- **Network Delays**: Minor delays possible due to blockchain confirmation times
+- **Price Availability**: Some new or low-volume tokens may lack price data
 
-### Privacy Protection
-- **Address Privacy**: Detected address information is temporarily stored
-- **Data Cleanup**: Regularly clean expired detection data
-- **Anonymization**: No association with user identity information
+### Security Considerations
+- **Read-only Operations**: Detection only reads data, never modifies accounts
+- **No Private Keys**: Address detection doesn't require private keys
+- **API Security**: Uses official Hyperliquid API endpoints
+- **Data Privacy**: No sensitive data stored permanently
 
 ## 🆘 Frequently Asked Questions
 
 ### Q: What to do if detection fails?
-A: Please check:
-1. Whether the address format is correct
-2. Whether the network connection is normal
-3. Whether detection frequency limit is exceeded
-4. Try again later or contact technical support
+A: Check the following:
+1. **Address Format**: Ensure it's a valid Ethereum-format address (42 characters, starts with 0x)
+2. **Network Connection**: Verify stable internet connection
+3. **API Status**: Hyperliquid API may be temporarily unavailable
+4. **Retry**: Wait a moment and try again, or contact support if issue persists
 
-### Q: Why do some assets have no price?
+### Q: Why do some assets show "Price Unknown"?
 A: Possible reasons:
-1. Newly listed tokens have no price data yet
-2. Low liquidity tokens
-3. Price API temporarily unavailable
-4. Token has been delisted or stopped trading
+1. **New Tokens**: Recently listed tokens may not have price data yet
+2. **Low Liquidity**: Tokens with very low trading volume
+3. **API Issues**: Hyperliquid price API temporarily unavailable
+4. **Delisted Tokens**: Tokens no longer actively traded
 
-### Q: How is the risk level determined?
-A: Based on multiple factors:
-1. Third-party risk databases
-2. Trading behavior analysis
-3. Address activity patterns
-4. Community reports
+### Q: How is the risk level calculated?
+A: Risk level is determined by:
+1. **Total Portfolio Value**: Higher values = higher risk category
+2. **Asset Count**: More assets = increased complexity
+3. **Simple Algorithm**:
+   - Low: < $1,000 and ≤ 5 assets
+   - Medium: $1,000-$10,000 or 6-10 assets
+   - High: > $10,000 or > 10 assets
 
-### Q: Can detection results be exported?
-A: Currently supports:
-1. Copy detection result text
-2. Generate detection report screenshots
-3. Export function is under development
+### Q: What does "recoverable" mean?
+A: An address is considered recoverable if:
+1. **Minimum Value**: Total asset value ≥ $0.01
+2. **Supported Assets**: Contains spot, perp, vault, or staked assets
+3. **Technical Access**: Address is accessible via Hyperliquid API
+
+### Q: Can I detect the same address multiple times?
+A: Yes, you can re-detect addresses to:
+1. **Get Updated Balances**: After trading or transfers
+2. **Refresh Prices**: Get current market values
+3. **Monitor Changes**: Track portfolio changes over time
+4. **Pre-Recovery Check**: Verify assets before recovery operations

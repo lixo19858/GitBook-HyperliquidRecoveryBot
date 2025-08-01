@@ -59,7 +59,7 @@ Click the link to access directly: **[https://t.me/HyperliquidRecoveryBot](https
 - **Private Key Security**: AES-256 encryption, immediate cleanup after operation
 - **Operation Transparency**: All steps and fees are clearly displayed
 - **Risk Control**: Multi-layer verification mechanism ensures operation safety
-- **24/7 Support**: Round-the-clock technical support service
+
 
 ## 📞 Get Help
 

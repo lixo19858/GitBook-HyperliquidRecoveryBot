@@ -149,7 +149,6 @@ Available commands:
 ### Service Fee Structure
 - **Rate**: 0.5% of recovery amount
 - **Minimum Fee**: 1 USDC
-- **Maximum Fee**: 100,000,000 USDC
 - **Billing Method**: Automatically deducted from recovered assets
 
 ### Fee Examples

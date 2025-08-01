@@ -165,8 +165,8 @@ docs/gitbook/
 # Summary
 
 * [项目介绍](README.md)
-* [快速开始](quick-start.md)
-* [新页面](new-page.md)
+* [快速开始](zh/quick-start.md)
+* [功能特性](zh/features.md)
 ```
 
 ## 📊 SEO 优化

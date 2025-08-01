@@ -11,7 +11,6 @@ This document collects the most common questions and detailed answers that users
 **A:** The bot's basic functions (address detection) are free. Asset recovery services charge service fees:
 - **Rate**: 0.5% of recovery amount
 - **Minimum Fee**: 1 USDC
-- **Maximum Fee**: 100,000,000 USDC
 
 ### Q: How to confirm this is the official bot?
 **A:** Please ensure you access the bot using the official link:
@@ -25,7 +24,7 @@ This document collects the most common questions and detailed answers that users
 - **English**: Full English language support
 
 ### Q: What are the bot's operating hours?
-**A:** The bot runs 24/7 and can be used at any time. However, it is recommended to perform important operations when network conditions are good.
+**A:** The bot runs continuously and can be used at any time. However, it is recommended to perform important operations when network conditions are good.
 
 ## 🔍 Address Detection Questions
 
@@ -97,8 +96,7 @@ This document collects the most common questions and detailed answers that users
 1. Check if network connection is stable
 2. Confirm if private key and address are correct
 3. Check error message information
-4. Contact technical support for help
-5. Can try recovery again
+4. Can try recovery again
 
 ## 💰 Fee Related Questions
 
@@ -151,8 +149,6 @@ Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 **A:** If any suspicious activity is found:
 1. Stop operation immediately
 2. Screenshot and save evidence (excluding sensitive information)
-3. Report through bot feedback function
-4. Contact technical support
 
 ## 🔧 Technical Questions
 
@@ -175,14 +171,13 @@ Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 1. Check if network connection is stable
 2. Try switching to a more stable network
 3. Wait a few minutes and retry
-4. If problem persists, contact technical support
 
 ### Q: What to do if API calls fail?
 **A:** API call failures may be due to:
 - Hyperliquid API temporarily unavailable
 - Network connection issues
 - Request frequency too high
-- Recommend retrying later or contacting technical support
+- Recommend retrying later
 
 ## 📱 User Experience Questions
 
@@ -197,7 +192,6 @@ Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 1. Try restarting Telegram app
 2. Send /start command to reinitialize
 3. Check if Telegram app is the latest version
-4. If problem persists, contact technical support
 
 ### Q: What to do if operation response is slow?
 **A:** Slow operation response may be due to:
@@ -206,11 +200,7 @@ Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 - Slow Hyperliquid API response
 - Recommend operating when network conditions are good
 
-### Q: How to provide feedback and suggestions?
-**A:** You can provide feedback through:
-- Use feedback function within the bot
-- Describe problems or suggestions in detail
-- Provide relevant screenshots (excluding sensitive information)
+
 
 ## 🆘 Emergency Situations
 
@@ -219,21 +209,14 @@ Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
 1. Don't panic, record error information
 2. Check if network connection is normal
 3. Check if some operations have been completed
-4. Contact technical support and provide detailed information
 
 ### Q: What to do if assets don't reach target address?
 **A:** If assets don't reach target address:
 1. Check transaction hash status in blockchain explorer
 2. Confirm if target address is correct
 3. Wait for more block confirmations
-4. If confirmed there's a problem, contact technical support immediately
 
-### Q: How to contact technical support?
-**A:** Ways to contact technical support:
-- Use feedback function within the bot
-- Describe problems and operation steps in detail
-- Provide relevant time, address, transaction hash and other information
-- Mark "urgent" for emergency situations
+
 
 ## 📊 Other Questions
 
@@ -268,10 +251,7 @@ If your question is not answered here, please:
    - [Quick Start](quick-start.md)
    - [Bot Usage Guide](bot-usage.md)
 
-2. **Contact Us**:
-   - Use feedback function within the bot
-   - Describe your problem in detail
-   - We will reply to you as soon as possible
+
 
 3. **Community Support**:
    - Join user discussion groups
