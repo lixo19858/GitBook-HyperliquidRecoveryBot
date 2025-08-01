@@ -101,33 +101,56 @@ Proceeding with recovery execution...
 ```
 
 #### Step 5: Recovery Execution
+
+**Example 1: Spot Assets Only**
 ```
-🚀 Executing systematic recovery plan...
+🚀 Executing recovery plan...
+
+Phase 1/3: Spot Account Liquidation
+🔄 Converting ETH to USDC in spot account...
+✅ ETH → USDC conversion: 0.5 ETH → 734.56 USDC
+🔄 Converting BTC to USDC in spot account...
+✅ BTC → USDC conversion: 0.001 BTC → 45.00 USDC
+✅ Spot account liquidated: 1,279.56 USDC total
+
+Phase 2/3: Transfer to Perp Account
+🔄 Transferring all USDC: Spot → Perp account...
+✅ Transfer completed: 1,279.56 USDC moved to perp account
+
+Phase 3/3: Withdrawal
+🔄 Withdrawing USDC from perp account to Arbitrum...
+💰 Service fee deducted: 6.40 USDC (0.5%)
+✅ Withdrawal completed: 1,273.16 USDC transferred
+
+🎉 Recovery completed successfully!
+```
+
+**Example 2: Mixed Assets (Spot + Perp)**
+```
+🚀 Executing recovery plan...
 
 Phase 1/4: Spot Account Liquidation
-🔄 Liquidating ETH in spot account...
-✅ ETH → USDC conversion: 0.5 ETH → 734.56 USDC
-🔄 Liquidating BTC in spot account...
-✅ BTC → USDC conversion: 0.001 BTC → 45.00 USDC
-✅ Spot account fully liquidated: 1,279.56 USDC total
+🔄 Converting ETH to USDC in spot account...
+✅ ETH → USDC conversion: 0.3 ETH → 440.74 USDC
+✅ Spot account liquidated: 940.74 USDC total
 
-Phase 2/4: Inter-Account Consolidation
+Phase 2/4: Transfer to Perp Account
 🔄 Transferring all USDC: Spot → Perp account...
-✅ Transfer executed: 1,279.56 USDC moved to perp account
+✅ Transfer completed: 940.74 USDC moved to perp account
 
 Phase 3/4: Perp Account Liquidation
 🔄 Closing ETH-USD perpetual position...
-✅ Position liquidated: +0.1 ETH realized profit
+✅ Position closed: +0.2 ETH realized
 🔄 Converting realized ETH to USDC...
-✅ Final conversion: 0.1 ETH → 147.12 USDC
-✅ Perp account fully liquidated: 1,426.68 USDC total
+✅ ETH → USDC conversion: 0.2 ETH → 294.12 USDC
+✅ Perp account liquidated: 1,234.86 USDC total
 
-Phase 4/4: Unified Withdrawal
-🔄 Executing withdrawal to Arbitrum network...
-💰 Service fee automatically deducted: 7.13 USDC (0.5%)
-✅ Withdrawal completed: 1,419.55 USDC transferred
+Phase 4/4: Withdrawal
+🔄 Withdrawing USDC from perp account to Arbitrum...
+💰 Service fee deducted: 6.17 USDC (0.5%)
+✅ Withdrawal completed: 1,228.69 USDC transferred
 
-🎉 Recovery process completed successfully!
+🎉 Recovery completed successfully!
 ```
 
 #### Step 6: Recovery Results
