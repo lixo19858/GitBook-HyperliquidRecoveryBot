@@ -113,39 +113,4 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 
 
 
-## 📱 User Experience
-
-### Interface Design
-- **Clean and Intuitive**: Clear button and menu design
-- **Responsive**: Adapted for mobile and desktop Telegram
-- **Real-time Feedback**: Instant operation feedback and status updates
-- **Error Prompts**: Friendly error prompts and solution suggestions
-
-### Operation Flow
-- **Wizard-style**: Clear step-by-step operation wizard
-- **Confirmation Mechanism**: Confirmation mechanism before important operations
-- **Progress Display**: Detailed operation progress display
-- **Result Presentation**: Clear operation result presentation
-
-### Help Support
-- **Built-in Help**: Built-in help and instructions within the bot
-- **FAQ**: Complete FAQ and problem solutions
-
-## 🚀 Performance Features
-
-### Response Speed
-- **Fast Detection**: Usually complete address detection in 5-30 seconds
-- **Efficient Recovery**: Complete asset recovery in 3-8 minutes
-- **Real-time Updates**: Real-time updates of operation status and progress
-
-### Reliability
-- **High Availability**: 99.9% system availability
-- **Fault Tolerance**: Complete error handling and recovery mechanisms
-- **Data Backup**: Automatic backup and recovery of important data
-
-### Scalability
-- **Modular**: Modular design, easy for feature expansion
-- **API Friendly**: Ready for future API integration
-- **Multi-instance**: Support multi-instance deployment and load balancing
-
-These features ensure that Hyperliquid Recovery Bot can provide users with secure, efficient, and user-friendly asset recovery services.
+These features ensure that Hyperliquid Recovery Bot can provide users with secure and efficient asset recovery services.
