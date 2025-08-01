@@ -71,7 +71,7 @@ This document collects the most common questions and detailed answers that users
 ### Q: How long does the recovery process take?
 **A:** Usually takes 3-8 minutes, depending on:
 - Asset types and quantities
-- Whether perpetual contract assets need conversion
+- Whether spot and perp assets need liquidation
 - Network congestion conditions
 - Transaction confirmation speed
 

@@ -77,19 +77,17 @@ Invalid address formats:
 📊 Asset Count: 3 types of assets
 
 📋 Detailed Asset Information:
-┌─────────────────────────────────┐
-│ Spot Assets (Spot Account)      │
-├─────────────────────────────────┤
-│ USDC: 500.00 ($500.00)         │
-│ ETH: 0.5 ($734.56)             │
-│ BTC: 0.001 ($45.00)            │
-└─────────────────────────────────┘
+💰 Assets Found:
 
-┌─────────────────────────────────┐
-│ Perpetual Contracts (Perp)     │
-├─────────────────────────────────┤
-│ No perpetual contract assets    │
-└─────────────────────────────────┘
+[SPOT] USDC: 500.00 ($500.00)
+[SPOT] ETH: 0.5 ($734.56)
+[SPOT] BTC: 0.001 ($45.00)
+[PERP] USDC: 0.00 ($0.00)
+
+💡 Notes:
+• [SPOT] = Spot account assets
+• [PERP] = Perpetual contract account assets
+• All assets will be converted to USDC and withdrawn from perp account
 
 🛠️ Recoverable: Yes
 💡 Suggestion: This address contains recoverable assets, recommend using recovery function
@@ -152,11 +150,11 @@ Spot Assets:
 • USDC: 500.00 ($500.00)
 • ETH: 0.5 ($734.56)
 
-Perpetual Contract Assets:
+Perp Assets:
 • None
 
 💰 Total Value: $1,234.56
-🔄 Assets needing conversion: None
+🔄 Assets needing liquidation: ETH to USDC
 ```
 
 #### 5. Recovery Plan Confirmation
@@ -170,10 +168,11 @@ Perpetual Contract Assets:
 
 📝 Execution Steps:
 1. ✅ Asset analysis complete
-2. 🔄 Convert perpetual contract assets (if any)
-3. 🔄 Withdraw spot assets
-4. 🔄 Collect service fee
-5. 🔄 Clean temporary data
+2. 🔄 Liquidate spot assets to USDC
+3. 🔄 Transfer USDC to perp account
+4. 🔄 Withdraw USDC from perp account to Arbitrum
+5. 🔄 Collect service fee
+6. 🔄 Clean temporary data
 
 ⏱️ Estimated Time: 2-5 minutes
 
