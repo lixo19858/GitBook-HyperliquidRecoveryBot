@@ -48,8 +48,9 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 - **Error Handling**: Smart error handling and retry mechanisms to ensure operation success
 
 ### Asset Conversion Processing
-- **Perp to Spot**: Automatically convert perpetual contract assets to spot assets
-- **Position Management**: Intelligently handle active positions, close positions first then transfer margin
+- **Spot Liquidation**: Automatically convert non-USDC assets in spot account to USDC
+- **Perp Liquidation**: Intelligently handle perpetual contract positions, close positions and convert to USDC
+- **Account Consolidation**: Transfer spot USDC to perp account for unified withdrawal
 - **Precision Control**: Precisely handle decimal places and minimum trading units
 - **Slippage Protection**: Automatically set reasonable slippage to protect user interests
 

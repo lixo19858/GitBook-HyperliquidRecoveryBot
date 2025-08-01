@@ -81,18 +81,16 @@ Available commands:
 💰 Total Value: $1,234.56
 
 📊 Asset Details:
-┌─────────────────────────────────┐
-│ Spot Assets (Spot)              │
-├─────────────────────────────────┤
-│ USDC: 500.00 ($500.00)         │
-│ ETH: 0.5 ($734.56)             │
-└─────────────────────────────────┘
+💰 Assets Found:
 
-┌─────────────────────────────────┐
-│ Perpetual Contracts (Perp)     │
-├─────────────────────────────────┤
-│ No perpetual contract assets    │
-└─────────────────────────────────┘
+[SPOT] USDC: 500.00 ($500.00)
+[SPOT] ETH: 0.5 ($734.56)
+[PERP] USDC: 0.00 ($0.00)
+
+💡 Notes:
+• [SPOT] = Spot account assets
+• [PERP] = Perpetual contract account assets
+• All assets will be converted to USDC and withdrawn from perp account
 
 🛠️ Recoverable Assets: Yes
 💡 Suggestion: This address contains recoverable assets, recommend using asset recovery function
@@ -134,9 +132,10 @@ Available commands:
 
 📋 Recovery Steps:
 1. ✅ Asset analysis complete
-2. 🔄 Convert perpetual contract assets to spot assets
-3. 🔄 Withdraw all assets to safe address
-4. 🔄 Collect service fee (0.5% = $6.17)
+2. 🔄 Convert all spot ETH to USDC (0.5 ETH → 734.56 USDC)
+3. 🔄 Transfer all spot USDC to perp account (1,234.56 USDC)
+4. 🔄 Withdraw all USDC from perp account to Arbitrum
+5. 🔄 Collect service fee (0.5% = $6.17)
 
 💡 Estimated completion time: 2-5 minutes
 ⚠️ Please confirm to start recovery operation

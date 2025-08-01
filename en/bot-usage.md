@@ -107,8 +107,8 @@ Invalid address formats:
 
 ### Function Features
 - **Automated Process**: Fully automated asset recovery process
-- **Smart Conversion**: Automatically convert perpetual contract assets to spot assets
-- **Safe Withdrawal**: Safely transfer assets to specified address
+- **Smart Liquidation**: Automatically convert all assets to USDC for unified withdrawal
+- **Safe Withdrawal**: Safely transfer USDC from perp account to Arbitrum
 - **Transparent Fees**: Clearly display all fees and costs
 
 ### Recovery Process Details
@@ -185,22 +185,26 @@ Confirm execution of recovery operation?
 ```
 🚀 Starting recovery execution...
 
-Step 1/4: Prepare recovery environment
+Step 1/5: Prepare recovery environment
 ✅ Verify private key and address
 ✅ Check network connection
 ✅ Initialize recovery parameters
 
-Step 2/4: Convert assets (if needed)
-🔄 Converting perpetual contract assets...
-✅ Conversion complete
+Step 2/5: Liquidate spot assets
+🔄 Converting spot ETH to USDC...
+✅ ETH → USDC conversion complete
+🔄 Converting spot BTC to USDC...
+✅ BTC → USDC conversion complete
 
-Step 3/4: Withdraw assets
-🔄 Withdrawing USDC...
-✅ USDC withdrawal complete
-🔄 Withdrawing ETH...
-✅ ETH withdrawal complete
+Step 3/5: Transfer to perp account
+🔄 Transferring USDC from spot to perp account...
+✅ Transfer complete
 
-Step 4/4: Collect service fee
+Step 4/5: Withdraw from perp account
+🔄 Withdrawing all USDC from perp account to Arbitrum...
+✅ Withdrawal complete
+
+Step 5/5: Collect service fee
 🔄 Collecting service fee...
 ✅ Service fee collection complete
 
