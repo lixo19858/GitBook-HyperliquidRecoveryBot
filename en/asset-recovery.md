@@ -8,11 +8,12 @@ Asset recovery is the core function of Hyperliquid Recovery Bot, helping users s
 The bot helps users recover assets by directly calling Hyperliquid API to perform asset conversions, transfers, and withdrawals. This is particularly useful when users need to move assets from addresses that may have restricted access to the official frontend.
 
 ### Recovery Process
-1. **Asset Detection**: Analyze all assets across spot, perp, vault, and staked accounts
-2. **Smart Conversion**: Convert non-USDC assets to USDC for easier withdrawal
-3. **Account Transfers**: Move assets between spot and perp accounts as needed
-4. **Withdrawal Execution**: Withdraw USDC to Arbitrum network
-5. **Fee Collection**: Collect service fees based on total recovery value
+1. **Comprehensive Asset Analysis**: Systematic detection and valuation of all assets across spot, perpetual contract, vault, and staking accounts
+2. **Spot Account Liquidation**: Execute market orders to convert all non-USDC assets in spot account to USDC, ensuring complete liquidation
+3. **Inter-Account Consolidation**: Transfer all USDC holdings from spot account to perpetual contract account for centralized management
+4. **Perpetual Contract Liquidation**: Close all open positions and convert remaining non-USDC assets in perp account to USDC
+5. **Unified Withdrawal Execution**: Perform consolidated withdrawal of all USDC from perpetual contract account to Arbitrum network
+6. **Automated Fee Settlement**: Seamless deduction of service fees during the withdrawal transaction
 
 ### Supported Asset Types
 - **Spot Assets**: Direct conversion and withdrawal of spot account assets
@@ -56,10 +57,10 @@ Please enter the address you want to recover assets from:
 • Total Value: $1,235.06
 
 📋 Recovery Plan:
-1. Convert non-USDC spot assets to USDC
-2. Transfer all spot USDC to perp account
-3. Convert non-USDC perp assets to USDC
-4. Withdraw all USDC to Arbitrum
+1. Liquidate all non-USDC assets in spot account → USDC
+2. Consolidate all spot USDC → transfer to perp account
+3. Liquidate all non-USDC assets in perp account → USDC
+4. Execute unified withdrawal → all USDC to Arbitrum
 
 💰 Service Fee: $6.18 (0.5%)
 💵 Net Recovery: $1,228.88
@@ -98,30 +99,32 @@ Proceeding with recovery execution...
 
 #### Step 5: Recovery Execution
 ```
-🚀 Executing recovery plan...
+🚀 Executing systematic recovery plan...
 
-Step 1/4: Converting spot assets
-🔄 Converting ETH to USDC...
-✅ ETH conversion complete: 0.5 ETH → 734.56 USDC
-🔄 Converting BTC to USDC...
-✅ BTC conversion complete: 0.001 BTC → 45.00 USDC
+Phase 1/4: Spot Account Liquidation
+🔄 Liquidating ETH in spot account...
+✅ ETH → USDC conversion: 0.5 ETH → 734.56 USDC
+🔄 Liquidating BTC in spot account...
+✅ BTC → USDC conversion: 0.001 BTC → 45.00 USDC
+✅ Spot account fully liquidated: 1,279.56 USDC total
 
-Step 2/4: Transferring to perp account
-🔄 Transferring 1,279.56 USDC from spot to perp...
-✅ Transfer complete
+Phase 2/4: Inter-Account Consolidation
+🔄 Transferring all USDC: Spot → Perp account...
+✅ Transfer executed: 1,279.56 USDC moved to perp account
 
-Step 3/4: Converting perp assets
-🔄 Closing ETH-USD position...
-✅ Position closed: +0.1 ETH realized
-🔄 Converting additional ETH to USDC...
-✅ Conversion complete: 0.1 ETH → 147.12 USDC
+Phase 3/4: Perp Account Liquidation
+🔄 Closing ETH-USD perpetual position...
+✅ Position liquidated: +0.1 ETH realized profit
+🔄 Converting realized ETH to USDC...
+✅ Final conversion: 0.1 ETH → 147.12 USDC
+✅ Perp account fully liquidated: 1,426.68 USDC total
 
-Step 4/4: Final withdrawal
-🔄 Withdrawing 1,420.50 USDC to Arbitrum...
-💰 Service fee deducted: 7.10 USDC
-✅ Withdrawal complete: 1,413.40 USDC
+Phase 4/4: Unified Withdrawal
+🔄 Executing withdrawal to Arbitrum network...
+💰 Service fee automatically deducted: 7.13 USDC (0.5%)
+✅ Withdrawal completed: 1,419.55 USDC transferred
 
-🎉 Recovery completed successfully!
+🎉 Recovery process completed successfully!
 ```
 
 #### Step 6: Recovery Results
@@ -286,26 +289,28 @@ The bot implements strict security measures for private key management:
 The bot follows a standardized recovery process:
 
 ```
-📋 Recovery Steps:
+📋 Professional Recovery Algorithm:
 
-1. Asset Detection:
-   • Query all account types (spot, perp, vault, staked)
-   • Calculate total USD value
-   • Identify conversion requirements
+1. Multi-Account Asset Discovery:
+   • Parallel query of spot, perp, vault, and staked accounts
+   • Real-time USD valuation using market data
+   • Comprehensive asset inventory and conversion mapping
 
-2. Asset Conversion:
-   • Convert non-USDC spot assets to USDC
-   • Close perp positions and convert to USDC
-   • Handle vault/staked assets if applicable
+2. Sequential Liquidation Strategy:
+   • Phase A: Complete spot account liquidation (non-USDC → USDC)
+   • Phase B: Spot-to-perp USDC consolidation transfer
+   • Phase C: Complete perp account liquidation (non-USDC → USDC)
+   • Phase D: Unified withdrawal execution
 
-3. Account Consolidation:
-   • Transfer all spot USDC to perp account
-   • Ensure all assets are in USDC in perp account
+3. Risk-Managed Execution:
+   • Market order execution with slippage protection
+   • Transaction confirmation at each phase
+   • Automatic retry mechanism for failed operations
 
-4. Final Withdrawal:
-   • Calculate service fee
-   • Execute withdrawal to Arbitrum
-   • Provide transaction confirmation
+4. Settlement and Finalization:
+   • Proportional service fee calculation and deduction
+   • Cross-chain withdrawal to Arbitrum network
+   • Transaction hash verification and audit trail
 ```
 
 ### Supported Networks
