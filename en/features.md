@@ -123,22 +123,6 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 - **Error Tracking**: Automatically record and analyze system errors
 - **Availability**: Monitor system availability and service quality
 
-## 🔧 Advanced Features
-
-### Batch Operations (Under Development)
-- **Batch Detection**: Detect multiple addresses at once
-- **Batch Recovery**: Simultaneously recover assets from multiple addresses
-- **Summary Reports**: Generate summary reports for batch operations
-
-### Scheduled Monitoring (Under Development)
-- **Scheduled Detection**: Set up scheduled detection tasks
-- **Status Notifications**: Asset or risk status change notifications
-- **Automatic Recovery**: Automatically trigger recovery when conditions are met
-
-### API Interface (Planned)
-- **Open API**: Provide API interface for developers
-- **Third-party Integration**: Support third-party application integration
-- **Webhook**: Support Webhook notification mechanism
 
 ## 📱 User Experience
 

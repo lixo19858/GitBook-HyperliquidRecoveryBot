@@ -235,39 +235,7 @@ Step 4/4: Collect service fee
 Thank you for using Hyperliquid Recovery Bot!
 ```
 
-## 🔧 Advanced Features
 
-### Batch Address Detection
-```
-Bot: 🔍 Batch Address Detection (Under Development)
-
-Function Description:
-• Support detecting multiple addresses at once
-• Generate summary reports
-• Export detection results
-
-Usage Method:
-1. Select batch detection mode
-2. Input multiple addresses (one per line)
-3. Wait for batch detection completion
-4. View summary results
-```
-
-### Scheduled Detection
-```
-Bot: ⏰ Scheduled Detection (Under Development)
-
-Function Description:
-• Set up scheduled detection tasks
-• Asset change notifications
-• Risk status monitoring
-
-Usage Method:
-1. Add monitoring addresses
-2. Set detection frequency
-3. Configure notification methods
-4. Start scheduled tasks
-```
 
 ## 📊 Usage Statistics
 
