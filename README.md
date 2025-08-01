@@ -21,6 +21,16 @@ Hyperliquid Recovery Bot is a professional Telegram bot designed for Hyperliquid
 
 Hyperliquid Recovery Bot 是一个专业的 Telegram 机器人，专为 Hyperliquid 用户设计，帮助从被标记为高风险的地址中安全地恢复数字资产。
 
+## ⚠️ Flagged Address Warning / 标记地址提示
+
+Encountering address risk flagging on Hyperliquid platform and unable to operate assets normally?
+
+在 Hyperliquid 平台遇到地址被标记风险，资产无法正常操作？
+
+If your address is flagged by Hyperliquid's third-party screening tool, the system will display warnings in multiple languages. Our bot can help you safely recover your assets when you cannot access the official frontend interface.
+
+如果您的地址被Hyperliquid第三方筛选工具标记，系统将显示多语言警告。当您无法访问官方前端界面时，我们的机器人可以帮助您安全地恢复资产。
+
 ## 🚀 Quick Access / 快速访问
 
 **Telegram Bot**: [https://t.me/HyperliquidRecoveryBot](https://t.me/HyperliquidRecoveryBot)

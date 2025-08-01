@@ -8,6 +8,20 @@
 
 Hyperliquid Recovery Bot is a professional Telegram bot designed for Hyperliquid users to help you safely recover digital assets from addresses flagged as high-risk.
 
+Encountering address risk flagging on Hyperliquid platform and unable to operate assets normally?
+
+## ⚠️ Flagged Address Warning
+
+If your address is flagged by Hyperliquid's third-party screening tool, the system will display the following warning:
+
+**English**: Your address has been flagged as high risk by a third-party screening tool. This frontend interface does not support connection to the Hyperliquid blockchain by high risk addresses. If you think this is an error, you can open a support ticket.
+
+**中文**: 您的地址已被第三方筛选工具标记为高风险。此前端界面不支持高风险地址连接到Hyperliquid区块链。如果您认为这是一个错误，您可以开启一个支持票据。
+
+**한국어**: 귀하의 주소가 제3자 검증 도구에 의해 고위험으로 표시되었습니다. 이 프론트엔드 인터페이스는 고위험 주소의 하이퍼리퀴드 블록체인 연결을 지원하지 않습니다. 오류라고 생각되는 경우, 지원 티켓을 열 수 있습니다.
+
+**Français**: Votre adresse a été signalée comme à haut risque par un outil de filtrage tiers. Cette interface frontend ne prend pas en charge la connexion à la blockchain Hyperliquid par des adresses à haut risque. Si vous pensez qu'il s'agit d'une erreur, vous pouvez ouvrir un ticket de support.
+
 When your Hyperliquid address is flagged as high-risk and you cannot operate through the official frontend interface, this bot can help you:
 - Detect all assets in the address
 - Safely recover and transfer assets
