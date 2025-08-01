@@ -109,19 +109,7 @@ Hyperliquid Recovery Bot provides a complete asset detection and recovery soluti
 - **IP Monitoring**: Monitor abnormal IP access and operations
 - **Behavior Analysis**: Analyze user behavior patterns to identify risks
 
-## 📊 Monitoring and Statistics
 
-### User Behavior Tracking
-- **Access Records**: Record user access time and operation history
-- **Source Tracking**: Track user sources (such as promotional links)
-- **Usage Statistics**: Statistics on function usage frequency and preferences
-- **Success Rate**: Track operation success rate and failure reasons
-
-### System Monitoring
-- **Performance Monitoring**: Real-time monitoring of system response time and resource usage
-- **API Status**: Monitor external API call status and response time
-- **Error Tracking**: Automatically record and analyze system errors
-- **Availability**: Monitor system availability and service quality
 
 
 ## 📱 User Experience
