@@ -191,13 +191,7 @@ Service fee = $100,000 × 0.5% = $500.00
 3. **Transparency**: Fee amount clearly shown before execution
 4. **Single Payment**: One-time fee, no additional charges
 
-### Fee Configuration
-The fee structure is configurable via environment variables:
-- `SERVICE_FEE_ENABLED`: Enable/disable fee collection
-- `SERVICE_FEE_PERCENTAGE`: Fee percentage (default 0.5%)
-- `SERVICE_FEE_MIN_FEE`: Minimum fee amount (default $1.00)
-- `SERVICE_FEE_MAX_FEE`: Maximum fee amount (default $100M)
-- `SERVICE_FEE_RECIPIENT`: Address receiving fees
+
 
 ## 🔒 Security Implementation
 
@@ -392,7 +386,7 @@ If you encounter issues not covered above:
 4. **Screenshots**: Screenshots of error messages can be helpful
 
 ### Recovery Limitations
-- **Minimum Recovery**: $0.01 total value required
+- **Minimum Recovery**: $5.00 total value required
 - **Supported Assets**: Only assets with available market prices
 - **Network Dependency**: Requires both Hyperliquid and Arbitrum networks to be operational
 - **API Availability**: Dependent on Hyperliquid API uptime

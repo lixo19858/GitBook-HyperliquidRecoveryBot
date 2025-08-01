@@ -98,7 +98,7 @@ The bot automatically validates address format using viem library:
 🔍 Risk Level: Medium Risk
 💰 Total Value: $1,234.56
 📊 Asset Count: 5 assets
-🛠️ Recoverable: Yes (above $0.01 threshold)
+🛠️ Recoverable: Yes (above $5.00 threshold)
 ⏰ Detection Time: 2024-01-15 14:30:25
 ```
 
@@ -155,8 +155,8 @@ The risk level is calculated based on total asset value and asset count:
 The bot determines if assets are recoverable based on:
 
 1. **Minimum Value Threshold**:
-   - ✅ Total value ≥ $0.01: Considered recoverable
-   - ❌ Total value < $0.01: Below minimum threshold
+   - ✅ Total value ≥ $5.00: Considered recoverable
+   - ❌ Total value < $5.00: Below minimum threshold
 
 2. **Asset Types Supported**:
    - ✅ Spot assets: Directly recoverable
@@ -256,7 +256,7 @@ A: Risk level is determined by:
 
 ### Q: What does "recoverable" mean?
 A: An address is considered recoverable if:
-1. **Minimum Value**: Total asset value ≥ $0.01
+1. **Minimum Value**: Total asset value ≥ $5.00
 2. **Supported Assets**: Contains spot, perp, vault, or staked assets
 3. **Technical Access**: Address is accessible via Hyperliquid API
 
