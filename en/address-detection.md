@@ -189,25 +189,7 @@ The bot determines if assets are recoverable based on:
 2. **New Detection**: Enter the same address again for fresh detection
 3. **From Wallet Details**: Use wallet management interface for imported wallets
 
-## 📊 Technical Implementation
 
-### API Integration
-- **Hyperliquid SDK**: Uses official Hyperliquid JavaScript SDK
-- **Parallel Queries**: Fetches spot, perp, vault, and staked data simultaneously
-- **Error Handling**: Graceful handling of API failures and timeouts
-- **Rate Limiting**: Respects Hyperliquid API rate limits
-
-### Data Processing
-- **Asset Aggregation**: Combines data from multiple account types
-- **Price Matching**: Matches assets with current market prices
-- **Value Calculation**: Computes USD values with proper precision
-- **Risk Assessment**: Simple algorithm based on portfolio size
-
-### Performance Optimization
-- **Batch Price Fetching**: Gets all market prices in single API call
-- **Concurrent Requests**: Parallel processing of different account types
-- **Caching**: Price data cached for 30 seconds to reduce API calls
-- **Timeout Handling**: 30-second timeout for API requests
 
 ## ⚠️ Important Notes
 
