@@ -1,8 +1,9 @@
 # Hyperliquid Recovery Bot
 
 ![Hyperliquid Recovery Bot](https://img.shields.io/badge/Hyperliquid-Recovery%20Bot-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-2.6.0-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
 
 ## 🌐 Language Selection / 语言选择
 
