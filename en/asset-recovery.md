@@ -139,14 +139,39 @@ Please enter the private key for this address:
 Format: 64-character hexadecimal (with or without 0x prefix)
 Example: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
 
-[Enter Private Key] [Cancel]
+[Enter Private Key]
+[Enter Mnemonic]
+[Cancel]
 ```
 
-#### Step 5: Private Key Verification
-```
-🔍 Verifying private key...
+**Note**: You can choose to use either a private key or mnemonic phrase for recovery.
 
-✅ Private key format valid
+**If you choose to enter mnemonic**:
+```
+📝 Enter Mnemonic
+
+Please enter your mnemonic phrase to start the recovery process.
+
+📝 Format Requirements:
+• 12 or 24 words separated by spaces
+• Example: word1 word2 word3 ... word12
+
+⚠️ Security Tips:
+• Ensure you are in a secure environment
+• Never share or screenshot your mnemonic
+
+Format: 12 or 24 words separated by spaces
+Example: abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about
+
+[Enter Mnemonic]
+[Cancel]
+```
+
+#### Step 5: Credential Verification
+```
+🔍 Verifying credentials...
+
+✅ Credential format valid
 ✅ Address match confirmed
 ✅ Account access verified
 
