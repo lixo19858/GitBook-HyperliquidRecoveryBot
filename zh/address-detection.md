@@ -1,8 +1,5 @@
 # 地址检测功能
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 地址检测是 Hyperliquid Recovery Bot 的核心功能之一，帮助用户快速了解 Hyperliquid 地址中的资产情况。
 
 ## 🎯 功能概述

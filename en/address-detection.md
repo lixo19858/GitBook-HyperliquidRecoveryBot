@@ -1,8 +1,5 @@
 # Address Detection Function
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 Address detection is one of the core functions of Hyperliquid Recovery Bot, helping users quickly understand the asset situation in Hyperliquid addresses.
 
 ## 🎯 Function Overview

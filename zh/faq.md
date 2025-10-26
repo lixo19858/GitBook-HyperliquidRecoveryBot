@@ -1,8 +1,5 @@
 # 常见问题解答
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 本文档收集了用户在使用 Hyperliquid Recovery Bot 时最常遇到的问题和详细解答。
 
 ## 🤖 机器人基础问题

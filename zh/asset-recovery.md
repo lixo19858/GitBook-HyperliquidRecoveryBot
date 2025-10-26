@@ -1,8 +1,5 @@
 # 资产恢复功能
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 资产恢复是 Hyperliquid Recovery Bot 的核心功能，帮助用户从 Hyperliquid 地址中安全地恢复数字资产。
 
 ## 🎯 功能概述

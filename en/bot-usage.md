@@ -1,8 +1,5 @@
 # Bot Usage Guide
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 This document provides detailed instructions on all functions and usage methods of Hyperliquid Recovery Bot.
 
 ## 🤖 Bot Commands

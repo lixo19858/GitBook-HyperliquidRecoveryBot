@@ -1,8 +1,5 @@
 # 功能特性
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 Hyperliquid Recovery Bot 提供完整的资产检测和恢复解决方案，专门帮助用户从被标记的 Hyperliquid 地址中恢复资产。
 
 ## 🔍 地址检测功能

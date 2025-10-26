@@ -1,8 +1,5 @@
 # Features
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 Hyperliquid Recovery Bot provides a complete asset detection and recovery solution, specifically designed to help users recover assets from flagged Hyperliquid addresses.
 
 ## 🔍 Address Detection Function

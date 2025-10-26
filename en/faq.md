@@ -1,8 +1,5 @@
 # Frequently Asked Questions
 
-![Version](https://img.shields.io/badge/version-2.6.0-green)
-![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
-
 This document collects the most common questions and detailed answers that users encounter when using Hyperliquid Recovery Bot.
 
 ## 🤖 Bot Basic Questions
