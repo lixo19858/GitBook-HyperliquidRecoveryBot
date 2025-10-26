@@ -3,6 +3,7 @@
 ![Hyperliquid Recovery Bot](https://img.shields.io/badge/Hyperliquid-Recovery%20Bot-blue)
 ![Version](https://img.shields.io/badge/version-2.6.0-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
 
 ## 🤖 What is Hyperliquid Recovery Bot?
 
