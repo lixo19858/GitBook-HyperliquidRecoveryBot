@@ -1,7 +1,7 @@
 # Hyperliquid Recovery Bot User Guide
 
 ![Hyperliquid Recovery Bot](https://img.shields.io/badge/Hyperliquid-Recovery%20Bot-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-2.6.0-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## 🤖 What is Hyperliquid Recovery Bot?
@@ -30,21 +30,27 @@ When your Hyperliquid address is flagged as high-risk and you cannot operate thr
 ## ✨ Main Features
 
 ### 🔍 Smart Address Detection
-- **One-click Detection**: Quickly query all asset types in an address
-- **Real-time Data**: Display latest asset balances and values
-- **Risk Assessment**: Automatically identify address risk levels
-- **Multi-asset Support**: Support spot, perpetual contracts and other asset types
+- **4 Asset Types**: Detect Spot, Perpetual, Vault, and Staked assets
+- **Real-time Data**: Display latest balances and USD values
+- **Lock Status**: See which assets are locked and when they unlock
+- **Instant Results**: Get complete asset overview in seconds
 
-### 🛠️ Automated Asset Recovery
-- **Safe Recovery**: One-click asset recovery process
-- **Smart Conversion**: Automatically handle perpetual to spot conversion
-- **Transparent Fees**: 0.5% service fee based on recovery amount (minimum 1 USDC)
-- **Multi-layer Security**: Private key encryption protection, automatic cleanup after operation
+### 🛠️ 7-Step Automated Recovery
+- **Fully Automated**: Just provide private key, bot does everything
+- **All Asset Types**: Handles spot, perpetual, vault, and staked assets
+- **Smart Processing**: Converts everything to USDC and withdraws
+- **Progress Tracking**: See real-time progress for each step
+
+### 💰 Clear Pricing
+- **Service Fee**: 0.5% (minimum 1 USDC)
+- **Withdrawal Fees**: 2 USDC (Hyperliquid platform)
+- **No Hidden Costs**: All fees shown upfront
+- **Example**: Recover $1,000 → You get $993
 
 ### 🌐 User-friendly
-- **Bilingual**: Complete Chinese and English interface support
-- **Simple Operation**: Intuitive button-based operation interface
-- **Real-time Feedback**: Detailed operation progress and status prompts
+- **Bilingual**: Complete English and Chinese support
+- **Simple Steps**: Easy-to-follow process
+- **Safe & Secure**: Private key never saved
 
 ## 🚀 Get Started
 
@@ -63,16 +69,19 @@ Click the link to access directly: **[https://t.me/HyperliquidRecoveryBot](https
 
 ## 💰 Fee Structure
 
-- **Address Detection**: Completely free
-- **Asset Recovery**: 0.5% fee based on recovery amount
-- **Minimum Fee**: 1 USDC
-- **Fee Includes**: All network fees and technical service fees
+- **Address Detection**: Completely FREE
+- **Service Fee**: 0.5% of total value (minimum 1 USDC)
+- **Withdrawal Fees**: 2 USDC (Hyperliquid platform)
+- **Total Cost Example**:
+  - Recover $1,000 → Pay $7 → Get $993
+  - Recover $100 → Pay $3 → Get $97
 
 ## 🔒 Security Guarantee
 
-- **Private Key Security**: AES-256 encryption, immediate cleanup after operation
-- **Operation Transparency**: All steps and fees are clearly displayed
-- **Risk Control**: Multi-layer verification mechanism ensures operation safety
+- **Private Key Safety**: Never saved, automatically deleted after use
+- **Transparent Operations**: Every transaction has a verifiable hash
+- **Official Network**: All operations on official Hyperliquid blockchain
+- **You Stay in Control**: Verify everything on blockchain explorer
 
 
 ## 📞 Get Help

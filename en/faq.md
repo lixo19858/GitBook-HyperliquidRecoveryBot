@@ -8,9 +8,10 @@ This document collects the most common questions and detailed answers that users
 **A:** Hyperliquid Recovery Bot is a professional Telegram bot designed specifically for Hyperliquid ecosystem users to help users safely recover digital assets from addresses flagged as high-risk.
 
 ### Q: Is the bot free to use?
-**A:** The bot's basic functions (address detection) are free. Asset recovery services charge service fees:
-- **Rate**: 0.5% of recovery amount
-- **Minimum Fee**: 1 USDC
+**A:** Address detection is completely FREE. Asset recovery services charge:
+- **Service Fee**: 0.5% of total asset value (minimum 1 USDC)
+- **Withdrawal Fees**: 2 USDC (Hyperliquid platform)
+- **Example**: Recover $1,000 → Pay $7 → Get $993
 
 ### Q: How to confirm this is the official bot?
 **A:** Please ensure you access the bot using the official link:
@@ -61,70 +62,87 @@ This document collects the most common questions and detailed answers that users
 
 ## 🛠️ Asset Recovery Questions
 
+### Q: What asset types can be recovered?
+**A:** The bot can recover 4 types of assets:
+- ✅ **Spot Assets**: USDC, ETH, BTC, and other tokens
+- ✅ **Perpetual Contracts**: Long/short positions
+- ✅ **Vault Assets**: Assets deposited in vaults (if not locked)
+- ✅ **Staked Assets**: HYPE tokens staked to validators (requires waiting period)
+
 ### Q: When is asset recovery needed?
-**A:** When your address is flagged as high-risk and the following situations occur:
+**A:** When your address is flagged as high-risk and:
 - Cannot access Hyperliquid frontend interface
-- Frontend displays "address restricted" and other prompts
+- Frontend displays "address restricted" message
 - Cannot perform normal trading operations
 - Assets are "frozen" and cannot be operated
 
 ### Q: How long does the recovery process take?
-**A:** Usually takes 3-8 minutes, depending on:
-- Asset types and quantities
-- Whether spot and perp assets need liquidation
-- Network congestion conditions
-- Transaction confirmation speed
+**A:** Spot and perpetual assets are usually recovered quickly. For staked assets:
+- **First run**: Unstake HYPE (wait 1 day)
+- **Second run**: Withdraw to perpetual account (wait 7 days)
+- **Third run**: Convert to USDC and withdraw
 
 ### Q: Can the recovery process be cancelled?
 **A:** Once confirmed to start recovery operation, it cannot be cancelled. Therefore, please carefully check all information before confirmation.
 
 ### Q: Is the private key secure?
-**A:** Yes, we adopt multiple security measures:
-- Use AES-256 encryption algorithm
-- Only temporarily stored during recovery process
-- Immediately cleaned after operation completion
-- Private key will not be persistently saved
+**A:** Yes, your private key is completely safe:
+- ✅ Never saved to any database
+- ✅ Only used during recovery
+- ✅ Automatically deleted after completion
+- ✅ Only used to sign transactions on official Hyperliquid network
+
+### Q: What if I have staked HYPE tokens?
+**A:** Staked assets require multiple runs:
+- **Day 0**: Bot unstakes your HYPE (wait 1 day)
+- **Day 1**: Bot withdraws to perpetual account (wait 7 days)
+- **Day 8**: Bot converts to USDC and withdraws
+- The bot will tell you when to run again
+
+### Q: What if my vault assets are locked?
+**A:** The bot will skip locked vault assets:
+- Wait for the lock period to end
+- Then run recovery again to withdraw them
 
 ### Q: Can I specify withdrawal to a specific address?
-**A:** Yes, you can:
-- Use system auto-generated safe address
-- Specify your own target address
-- Select address from wallet management
+**A:** Yes, you can specify any Arbitrum address as the target address.
 
 ### Q: What to do if recovery fails?
-**A:** If recovery fails:
-1. Check if network connection is stable
-2. Confirm if private key and address are correct
-3. Check error message information
-4. Can try recovery again
+**A:** The bot will automatically retry on network failures. If it continues to fail:
+1. Check your internet connection
+2. Verify private key is correct
+3. Check error message
+4. Contact support if needed
 
 ## 💰 Fee Related Questions
 
-### Q: How is the service fee calculated?
-**A:** Service fee calculation formula:
-```
-Service Fee = max(Recovery Amount × 0.5%, 1 USDC)
-```
+### Q: How much does recovery cost?
+**A:** Total cost = Service Fee + Withdrawal Fees
+- **Service Fee**: 0.5% of total asset value (minimum 1 USDC)
+- **Withdrawal Fees**: 2 USDC (Hyperliquid platform charges)
+
+**Examples**:
+| Your Assets | Service Fee | Withdrawal Fees | Total Cost | You Receive |
+|-------------|-------------|-----------------|------------|-------------|
+| $100 | $1 | $2 | $3 | $97 |
+| $1,000 | $5 | $2 | $7 | $993 |
+| $10,000 | $50 | $2 | $52 | $9,948 |
 
 ### Q: What does the service fee include?
 **A:** Service fee includes:
-- Asset recovery operation fee
-- Blockchain network transaction fees
-- Technical service and maintenance fees
-- Operation risk guarantee fees
+- All asset conversions (ETH, BTC, etc. → USDC)
+- All account transfers (Spot → Perpetual)
+- All blockchain transaction fees
+- Technical support
 
 ### Q: When is the service fee charged?
-**A:** Service fee is automatically deducted from recovered assets when recovery operation is completed, with priority:
-1. USDC
-2. ETH
-3. BTC
-4. Other tokens
+**A:** Service fee is automatically deducted during the final withdrawal step. No fees are charged if recovery fails.
 
-### Q: Will fees be charged if recovery fails?
-**A:** No. Service fees are only charged after successful recovery completion.
-
-### Q: Can other tokens be used to pay service fees?
-**A:** Service fees are automatically deducted from recovered assets, supporting multiple token payments.
+### Q: Why are there withdrawal fees?
+**A:** Hyperliquid platform charges 1 USDC per withdrawal. The bot makes 2 withdrawals:
+1. First withdrawal: Collect service fee (1 USDC)
+2. Second withdrawal: Send your assets (1 USDC)
+Total: 2 USDC withdrawal fees
 
 ## 🔒 Security Related Questions
 

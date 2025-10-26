@@ -1,116 +1,158 @@
 # Features
 
-Hyperliquid Recovery Bot provides a complete asset detection and recovery solution, specifically designed to solve Hyperliquid high-risk address issues.
+Hyperliquid Recovery Bot provides a complete asset detection and recovery solution, specifically designed to help users recover assets from flagged Hyperliquid addresses.
 
 ## 🔍 Address Detection Function
 
-### Smart Asset Recognition
-- **Comprehensive Detection**: Automatically identify spot and perpetual contract (Perp) assets
-- **Real-time Data**: Use Hyperliquid official API to get latest asset information
-- **Precise Calculation**: Real-time calculation of asset USD value and holding quantities
-- **Status Monitoring**: Monitor asset status changes and availability
+### What Can You Detect?
 
-### Risk Assessment System
-- **Smart Rating**: Automatically assess address risk levels
-  - 🟢 **Low Risk**: Normal address, can be used normally
-  - 🟡 **Medium Risk**: Minor risk flags, recommend cautious operation
-  - 🔴 **High Risk**: Restricted address, recommend immediate asset recovery
-- **Third-party Verification**: Integrate multiple risk databases for cross-validation
-- **Real-time Updates**: Risk status updated in real-time to ensure information accuracy
+The bot can detect **4 types of assets**:
 
-### Detection Result Display
+✅ **Spot Assets**
+- USDC, ETH, BTC, and other tokens
+- Shows balance and USD value
+
+✅ **Perpetual Contracts**
+- Open long/short positions
+- Shows position size and value
+
+✅ **Vault Assets**
+- Assets deposited in vaults
+- Shows lock-up status
+
+✅ **Staked Assets**
+- HYPE tokens staked to validators
+- Shows staked amount and status
+
+### What Information Do You Get?
+
+After detection, you'll see:
+- 💰 **Total Value**: Total worth of all your assets in USD
+- 📊 **Asset List**: Detailed list of each asset with amounts
+- 🔒 **Lock Status**: Which assets are locked and when they unlock
+- ✅ **Recoverability**: Whether assets can be recovered
+
+### Detection Result Example
 ```
 ✅ Detection Complete
 
 📍 Address: 0x1234...7890
-🔍 Risk Level: High Risk
 💰 Total Value: $1,234.56
-📊 Asset Types: 3 types
 
-📋 Asset Details:
-┌─────────────────────────────────┐
-│ Spot Assets (Spot)              │
-├─────────────────────────────────┤
-│ USDC: 500.00 ($500.00)         │
-│ ETH: 0.5 ($734.56)             │
-└─────────────────────────────────┘
+📊 Assets Found:
+[SPOT] USDC: 500.00 ($500.00)
+[SPOT] ETH: 0.5 ($734.56)
+[PERP] BTC-PERP: 0.001 BTC ($45.00)
+[VAULT] USDC: 100.00 ($100.00) 🔒 Locked (3 days)
+[STAKED] HYPE: 50.00 ($89.00)
 
 🛠️ Recoverable: Yes
-💡 Suggestion: Immediately use asset recovery function
+💡 Next Step: Click "Start Recovery" to begin
 ```
 
 ## 🛠️ Asset Recovery Function
 
-### Automated Recovery Process
-- **One-click Operation**: Users only need to provide private key, system automatically completes all recovery steps
-- **Smart Path**: Automatically select optimal asset conversion and withdrawal paths
-- **Progress Tracking**: Real-time display of recovery progress, letting users understand each step's status
-- **Error Handling**: Smart error handling and retry mechanisms to ensure operation success
+### 7-Step Automated Process
 
-### Asset Conversion Processing
-- **Spot Liquidation**: Automatically convert non-USDC assets in spot account to USDC
-- **Perp Liquidation**: Intelligently handle perpetual contract positions, close positions and convert to USDC
-- **Account Consolidation**: Transfer spot USDC to perp account for unified withdrawal
-- **Precision Control**: Precisely handle decimal places and minimum trading units
-- **Slippage Protection**: Automatically set reasonable slippage to protect user interests
+The bot handles everything automatically:
 
-### Secure Withdrawal Mechanism
-- **Multiple Verification**: Address verification, private key verification, asset verification
-- **Batch Processing**: Large assets support batch withdrawal to reduce risk
-- **Target Address**: Support custom target address or use system-generated safe address
-- **Transaction Confirmation**: Wait for block confirmation to ensure transaction success
+**Step 1: Convert Spot Assets**
+- Sells all non-USDC tokens to USDC
 
-## 💰 Transparent Fee Structure
+**Step 2: Transfer to Perpetual**
+- Moves USDC to perpetual account
 
-### Fee Calculation
-- **Base Rate**: 0.5% (calculated based on total recovered asset value)
-- **Minimum Fee**: 1 USDC
-- **Calculation Formula**: `Service Fee = max(Recovery Amount × 0.5%, 1 USDC)`
+**Step 3: Close Positions**
+- Closes all perpetual contract positions
 
-### Fee Includes
-- **Recovery Service**: Complete asset recovery operations
-- **Network Fees**: All blockchain transaction fees
-- **Risk Guarantee**: Operation risk guarantee and insurance
+**Step 4: Withdraw Vaults**
+- Withdraws unlocked vault assets
 
-### Charging Method
-- **Automatic Deduction**: Automatically deducted from recovered assets
-- **Priority**: USDC > ETH > BTC > Other tokens
-- **Transparent Display**: All fees clearly displayed before operation
-- **No Hidden Fees**: No additional or hidden fees charged
+**Step 5: Process Staking**
+- Unstakes HYPE tokens (requires 1+7 days waiting)
+
+**Step 6: Collect Fee**
+- Deducts 0.5% service fee (min 1 USDC)
+
+**Step 7: Final Withdrawal**
+- Withdraws everything to your address
+
+### What You Need to Provide
+
+1. **Source Address**: The flagged address with assets
+2. **Target Address**: Where you want to receive the funds
+3. **Private Key**: To authorize the transactions (automatically deleted after use)
+
+## 💰 Clear Fee Structure
+
+### How Much Does It Cost?
+
+**Service Fee**
+- 0.5% of total asset value
+- Minimum: 1 USDC
+
+**Withdrawal Fees** (Hyperliquid Platform)
+- 2 USDC total (2 withdrawals × 1 USDC each)
+
+### Quick Examples
+
+| Your Assets | Service Fee | Withdrawal Fees | You Receive |
+|-------------|-------------|-----------------|-------------|
+| $100 | $1 | $2 | **$97** |
+| $1,000 | $5 | $2 | **$993** |
+| $10,000 | $50 | $2 | **$9,948** |
+
+### What's Included?
+
+✅ All asset conversions
+✅ All account transfers
+✅ All blockchain fees
+✅ Technical support
+
+❌ No hidden fees
+❌ No extra charges
 
 ## 🌐 Multilingual Support
 
-### Supported Languages
-- **Chinese (zh)**: Complete Simplified Chinese interface
-- **English (en)**: Complete English interface
-- **Dynamic Switching**: Users can switch interface language at any time
-
-### Localization Features
-- **Cultural Adaptation**: Optimize user experience for different cultural backgrounds
-- **Number Format**: Format numbers and currency according to language habits
-- **Time Display**: Localized time and date formats
+The bot supports:
+- 🇺🇸 **English**: Full English interface
+- 🇨🇳 **中文**: Complete Chinese interface
+- 🔄 **Auto-detect**: Automatically detects your language preference
 
 ## 🔒 Security Features
 
-### Private Key Protection
-- **Encrypted Storage**: Use AES-256 encryption algorithm
-- **Temporary Storage**: Only temporarily stored during recovery process
-- **Automatic Cleanup**: Immediately clean all sensitive data after operation completion
-- **Memory Protection**: Prevent memory dumps from leaking private key information
+### Your Private Key is Safe
 
-### Operation Security
-- **Multiple Verification**: Address, private key, asset status multiple verification
-- **Operation Logs**: Record detailed logs of all critical operations
-- **Anomaly Detection**: Automatically detect abnormal operations and suspicious behavior
-- **Emergency Stop**: Provide emergency stop mechanism
+✅ **Never Saved**
+- Only used during recovery
+- Deleted immediately after completion
+- Never stored in any database
 
-### Risk Control
-- **Amount Limits**: Set reasonable single operation amount limits
-- **Frequency Control**: Prevent malicious or abnormally frequent operations
-- **IP Monitoring**: Monitor abnormal IP access and operations
-- **Behavior Analysis**: Analyze user behavior patterns to identify risks
+✅ **Only for Signing**
+- Used only to sign transactions
+- Never sent to external servers
+- All operations on official Hyperliquid network
 
+✅ **You Can Verify**
+- Every transaction has a hash
+- Check on blockchain explorer
+- Full transparency
 
+### Safe Operations
 
+✅ **Address Validation**
+- Checks address format before operations
+- Verifies private key matches address
 
-These features ensure that Hyperliquid Recovery Bot can provide users with secure and efficient asset recovery services.
+✅ **Transaction Confirmation**
+- Each step confirmed before proceeding
+- Automatic retry on network failures
+
+✅ **Error Handling**
+- Graceful handling of failures
+- Detailed error messages
+- Support available if needed
+
+---
+
+These features ensure that Hyperliquid Recovery Bot provides you with a **safe, transparent, and efficient** asset recovery service.

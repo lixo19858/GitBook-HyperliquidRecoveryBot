@@ -28,12 +28,6 @@ Address detection is one of the core functions of Hyperliquid Recovery Bot, help
 1. Send `/detect` command
 2. Directly enter the address to detect
 
-### Method 3: From Wallet Management
-If you have imported wallets, you can:
-1. Go to **💼 Wallet Management**
-2. Select a wallet and click **View Details**
-3. Click **🔍 Detect Assets** to check current balance
-
 ## 📝 Address Format Requirements
 
 ### Valid Address Formats
@@ -129,25 +123,28 @@ Assets are displayed with the following information:
 
 ### Risk Level Description
 
-The risk level is calculated based on total asset value and asset count:
+Risk level is assessed based on multiple factors:
 
-#### 🟢 Low Risk
-- **Criteria**: Total value < $1,000 AND asset count ≤ 5
-- **Description**: Small portfolio with limited assets
-- **Characteristics**: Lower complexity for recovery operations
+#### 🟢 Low Risk (Score < 25)
+- **Characteristics**: Simple asset structure
+- **Description**: Basic asset portfolio with straightforward recovery
 - **Recommendation**: Standard recovery procedures apply
 
-#### 🟡 Medium Risk
-- **Criteria**: Total value $1,000-$10,000 OR asset count 6-10
-- **Description**: Medium-sized portfolio requiring careful handling
-- **Characteristics**: May involve multiple asset types and conversions
+#### 🟡 Medium Risk (Score 25-49)
+- **Characteristics**: Moderate complexity portfolio
+- **Description**: May include multiple asset types or perpetual positions
 - **Recommendation**: Review recovery plan carefully before execution
 
-#### 🔴 High Risk
-- **Criteria**: Total value > $10,000 OR asset count > 10
-- **Description**: Large portfolio requiring extra caution
-- **Characteristics**: Complex recovery with multiple steps and higher fees
-- **Recommendation**: Consider batch recovery or professional assistance
+#### 🔴 High Risk (Score ≥ 50)
+- **Characteristics**: Complex asset portfolio
+- **Description**: High-value assets, multiple types, staking waiting periods, etc.
+- **Recommendation**: Requires extra caution and priority handling
+
+**Scoring Factors**:
+- Total asset value (> $100,000: +30 points; > $10,000: +15 points)
+- Asset type diversity (≥ 3 types: +20 points)
+- Staking waiting periods (has waiting assets: +25 points)
+- Open perpetual positions (has open positions: +15 points)
 
 ## 💡 Detection Result Analysis
 
@@ -187,7 +184,6 @@ The bot determines if assets are recoverable based on:
 ### Re-detection Methods
 1. **From Detection Results**: Click **🔄 Re-detect** button
 2. **New Detection**: Enter the same address again for fresh detection
-3. **From Wallet Details**: Use wallet management interface for imported wallets
 
 
 
@@ -228,13 +224,15 @@ A: Possible reasons:
 4. **Delisted Tokens**: Tokens no longer actively traded
 
 ### Q: How is the risk level calculated?
-A: Risk level is determined by:
-1. **Total Portfolio Value**: Higher values = higher risk category
-2. **Asset Count**: More assets = increased complexity
-3. **Simple Algorithm**:
-   - Low: < $1,000 and ≤ 5 assets
-   - Medium: $1,000-$10,000 or 6-10 assets
-   - High: > $10,000 or > 10 assets
+A: Risk level is based on a scoring system considering multiple factors:
+1. **Total Asset Value**: > $100,000 (+30 points), > $10,000 (+15 points)
+2. **Asset Type Diversity**: ≥ 3 types (+20 points)
+3. **Staking Waiting Periods**: Has waiting assets (+25 points)
+4. **Open Perpetual Positions**: Has open positions (+15 points)
+5. **Scoring Criteria**:
+   - Low Risk: < 25 points
+   - Medium Risk: 25-49 points
+   - High Risk: ≥ 50 points
 
 ### Q: What does "recoverable" mean?
 A: An address is considered recoverable if:

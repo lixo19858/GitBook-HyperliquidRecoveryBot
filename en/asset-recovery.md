@@ -4,25 +4,65 @@ Asset recovery is the core function of Hyperliquid Recovery Bot, helping users s
 
 ## 🎯 Function Overview
 
-### Recovery Principle
-The bot helps users recover assets by directly calling Hyperliquid API to perform asset conversions, transfers, and withdrawals. This is particularly useful when users need to move assets from addresses that may have restricted access to the official frontend.
+### What Does the Bot Do?
+The bot automatically helps you recover all your assets from a Hyperliquid address by:
+- Converting all your tokens to USDC
+- Closing any open positions
+- Withdrawing everything to your safe address
 
-### Recovery Process
-1. **Comprehensive Asset Analysis**: Systematic detection and valuation of all assets across spot, perpetual contract, vault, and staking accounts
-2. **Spot Account Liquidation**: Execute market orders to convert all non-USDC assets in spot account to USDC, ensuring complete liquidation
-3. **Inter-Account Consolidation**: Transfer all USDC holdings from spot account to perpetual contract account for centralized management
-4. **Perpetual Contract Liquidation**: Close all open positions and convert remaining non-USDC assets in perp account to USDC
-5. **Unified Withdrawal Execution**: Perform consolidated withdrawal of all USDC from perpetual contract account to Arbitrum network
-6. **Automated Fee Settlement**: Seamless deduction of service fees during the withdrawal transaction
+This is especially helpful when your address is flagged and you cannot access the official Hyperliquid interface.
+
+### 7-Step Recovery Process
+
+The bot follows a standardized 7-step process:
+
+**Step 1: Convert Spot Assets**
+- Sells all non-USDC tokens (ETH, BTC, etc.) in your spot account
+- Converts everything to USDC
+
+**Step 2: Transfer to Perpetual Account**
+- Moves all USDC from spot account to perpetual account
+- No fees for this internal transfer
+
+**Step 3: Close Perpetual Positions**
+- Closes all your open perpetual contract positions
+- Converts to USDC
+
+**Step 4: Withdraw Vault Assets**
+- Withdraws assets from vaults (if you have any)
+- Skips locked assets (you'll need to wait for unlock period)
+
+**Step 5: Process Staked Assets**
+- Unstakes your HYPE tokens (if you have any)
+- Note: Requires 1 day + 7 days waiting period
+- May need to run recovery multiple times
+
+**Step 6: Collect Service Fee**
+- Bot collects 0.5% service fee (minimum 1 USDC)
+
+**Step 7: Final Withdrawal**
+- Withdraws remaining USDC to your target address
+- 1 USDC Hyperliquid platform fee
 
 ### Supported Asset Types
-- **Spot Assets**: Convert to USDC and transfer to perp account for withdrawal
-- **Perpetual Contract Assets**: Close positions, margin remains in perp account for withdrawal
-- **Vault Assets**: Withdrawal from Hyperliquid vaults (if supported)
-- **Staked Assets**: Unstaking and recovery (if supported)
 
-### Important Note
-**All withdrawals must be executed from the perpetual contract (perp) account.** Spot assets cannot be directly withdrawn and must first be converted to USDC and transferred to the perp account.
+✅ **Spot Assets**
+- USDC, ETH, BTC, and other tokens
+- Automatically converted to USDC
+
+✅ **Perpetual Contracts**
+- Long/short positions
+- Automatically closed and converted to USDC
+
+✅ **Vault Assets**
+- Assets deposited in vaults
+- Withdrawn if not locked
+- Skipped if in lock-up period
+
+✅ **Staked Assets**
+- HYPE tokens staked to validators
+- Requires waiting period: 1 day (unstake) + 7 days (withdraw)
+- May need to run recovery 2-3 times
 
 ## 🚀 Usage Methods
 
@@ -31,26 +71,39 @@ The bot helps users recover assets by directly calling Hyperliquid API to perfor
 Method 1: Click 🛠️ Asset Recovery in main menu
 Method 2: Send /recovery command
 Method 3: Click [Start Recovery] on detection result page
-Method 4: From wallet details page for imported wallets
 ```
 
 ### Complete Recovery Process
 
-#### Step 1: Address Input
+#### Step 1: Enter Recovery Center
 ```
-🛠️ Asset Recovery Function
+🔄 Asset Recovery Center
 
-Please enter the address you want to recover assets from:
+Intelligent asset recovery system providing secure and reliable asset retrieval services.
 
-💡 Tips:
-• Use address from recent detection results
-• Select from imported wallet list
-• Enter new Hyperliquid address
+✨ Features:
+• Automatic asset detection and analysis
+• Secure recovery process execution
+• Support for all Hyperliquid asset types
 
-[Enter Address] [Use Recent] [Select Wallet]
+💡 How it works:
+1. Enter the address to recover assets from
+2. System analyzes available assets
+3. Provide private key or mnemonic phrase for secure recovery
+4. Automated recovery execution
+
+Click the button below to start asset recovery
+
+[🚀 Auto Recovery] [⬅️ Back]
 ```
 
-#### Step 2: Asset Analysis
+#### Step 2: Input Address
+After clicking "Auto Recovery", the system will prompt for address:
+```
+💬 Please enter the Hyperliquid address for recovery analysis:
+```
+
+#### Step 3: Asset Analysis
 ```
 📊 Analyzing assets...
 
@@ -71,7 +124,7 @@ Please enter the address you want to recover assets from:
 [Continue] [Cancel]
 ```
 
-#### Step 3: Private Key Input
+#### Step 4: Private Key Input
 ```
 🔐 Private Key Verification
 
@@ -89,7 +142,7 @@ Example: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
 [Enter Private Key] [Cancel]
 ```
 
-#### Step 4: Private Key Verification
+#### Step 5: Private Key Verification
 ```
 🔍 Verifying private key...
 
@@ -100,7 +153,7 @@ Example: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
 Proceeding with recovery execution...
 ```
 
-#### Step 5: Recovery Execution
+#### Step 6: Recovery Execution
 
 **Example 1: Spot Assets Only**
 ```
@@ -155,265 +208,196 @@ Phase 4/4: Withdrawal
 
 #### Step 6: Recovery Results
 ```
-✅ Asset Recovery Successful!
+✅ Asset Recovery Complete
 
-📊 Recovery Summary:
-┌─────────────────────────────────┐
-│ Recovery Details                │
-├─────────────────────────────────┤
-│ Source Address: 0x1234...7890   │
-│ Target Network: Arbitrum        │
-│ Recovery Time: 2024-01-15 14:35 │
-│ Duration: 4 min 23 sec          │
-└─────────────────────────────────┘
+📊 Execution Summary:
+• Total Steps: 7
+• Completed Steps: 7
+• Recovered Amount: 1487.58 USDC
+• Actual Fees: 9.48 USDC
+- Service Fee: 7.48 USDC
+- Withdrawal Fees: 2.00 USDC
 
-💰 Asset Breakdown:
-• Original Total: $1,495.06
-• Service Fee: $7.48 (0.5%)
-• Network Fees: Included
-• Final Amount: $1,487.58
-
-🔗 Transaction Hash:
-0xabc123...def456 ✅ Confirmed
-
-[View on Explorer] [Return to Menu]
+[Return to Menu]
 ```
 
-## 💰 Fee Structure Details
+## 💰 Fee Structure
 
-### Service Fee Calculation
-The service fee is calculated as a percentage of the total recovery value:
+### How Much Does It Cost?
 
-- **Rate**: 0.5% of total asset value
-- **Minimum Fee**: $1.00 USDC
-- **Maximum Fee**: $100,000,000 USDC (effectively no maximum)
-- **Currency**: Fees collected in USDC only
+**Service Fee**
+- **Rate**: 0.5% of your total asset value
+- **Minimum**: 1 USDC
+- **Calculation**: max(Total Value × 0.5%, 1 USDC)
 
-### Fee Calculation Examples
-```
-Example 1: Recovery value $100
-Service fee = max($100 × 0.5%, $1.00) = $1.00
+**Withdrawal Fees** (Hyperliquid Platform)
+- **Service Fee Withdrawal**: 1 USDC
+- **Final Withdrawal**: 1 USDC
+- **Total**: 2 USDC
 
-Example 2: Recovery value $1,000
-Service fee = $1,000 × 0.5% = $5.00
+### Complete Fee Examples
 
-Example 3: Recovery value $10,000
-Service fee = $10,000 × 0.5% = $50.00
+**Example 1: Recovering 100 USDC**
+- Service Fee: 1 USDC (100 × 0.5% = 0.5, but minimum is 1 USDC)
+- Withdrawal Fees: 2 USDC
+- **You Receive**: 97 USDC
 
-Example 4: Recovery value $100,000
-Service fee = $100,000 × 0.5% = $500.00
-```
+**Example 2: Recovering 1,000 USDC**
+- Service Fee: 5 USDC (1,000 × 0.5%)
+- Withdrawal Fees: 2 USDC
+- **You Receive**: 993 USDC
 
-### What's Included in the Fee
-- **Asset Conversion**: Converting non-USDC assets to USDC
-- **Account Transfers**: Moving assets between spot and perp accounts
-- **Withdrawal Processing**: Executing withdrawal to Arbitrum network
-- **Network Fees**: All blockchain transaction costs included
-- **Technical Support**: Bot operation and maintenance costs
+**Example 3: Recovering 10,000 USDC**
+- Service Fee: 50 USDC (10,000 × 0.5%)
+- Withdrawal Fees: 2 USDC
+- **You Receive**: 9,948 USDC
 
-### Fee Collection Process
-1. **Calculation**: Fee calculated based on total detected asset value
-2. **Deduction**: Automatically deducted during final withdrawal step
-3. **Transparency**: Fee amount clearly shown before execution
-4. **Single Payment**: One-time fee, no additional charges
+### Fee Breakdown
 
-
-
-## 🔒 Security Implementation
-
-### Private Key Handling
-The bot implements strict security measures for private key management:
+When you see the recovery plan, fees are shown like this:
 
 ```
-🔐 Private Key Security:
+💰 Fee Breakdown:
+• Service Fee: 5.00 USDC (0.5% of total value)
+• Withdrawal Fees: 2.00 USDC (Hyperliquid platform)
+  - Service fee withdrawal: 1.00 USDC
+  - Final withdrawal: 1.00 USDC
+• Total Cost: 7.00 USDC
 
-1. Memory-Only Storage:
-   • Private keys never written to disk
-   • Stored only in memory during operation
-   • Automatically cleared after completion
-
-2. Encryption in Transit:
-   • All API communications use HTTPS
-   • Private keys encrypted when passed between functions
-   • No logging of sensitive data
-
-3. Minimal Exposure:
-   • Private key used only for signing transactions
-   • No unnecessary operations performed
-   • Immediate cleanup after each step
+💵 You Will Receive: 993.00 USDC
 ```
 
-### Operation Security
+
+
+## 🔒 Security & Safety
+
+### Is My Private Key Safe?
+
+**Yes! Here's how we protect it:**
+
+✅ **Never Saved**
+- Your private key is only used during recovery
+- Not saved to any database or file
+- Automatically deleted from memory after completion
+
+✅ **Only Used for Signing**
+- Only used to sign transactions on Hyperliquid
+- Never sent to any external server
+- All operations happen on official Hyperliquid network
+
+✅ **You Stay in Control**
+- You can verify all transactions on blockchain explorer
+- Every transaction has a transaction hash
+- You can see exactly where your funds go
+
+### What Should I Do?
+
+**Before Recovery:**
+1. Make sure you're in a safe environment
+2. Don't share your private key with anyone
+3. Double-check the target address
+
+**During Recovery:**
+1. Keep Telegram open
+2. Don't close the app
+3. Wait for all steps to complete
+
+**After Recovery:**
+1. Check your target address received the funds
+2. Verify the transaction hash on blockchain explorer
+3. Your private key is automatically deleted
+
+## ⏰ Special Cases
+
+### Staked Assets (HYPE Tokens)
+
+If you have staked HYPE tokens, the recovery process is different:
+
+**Timeline:**
 ```
-🛡️ Security Mechanisms:
-
-1. Input Validation:
-   • Address format verification using viem library
-   • Private key format validation
-   • Asset balance verification before operations
-
-2. Transaction Safety:
-   • Each operation confirmed before proceeding
-   • Automatic retry on network failures
-   • Rollback capability for failed operations
-
-3. API Security:
-   • Official Hyperliquid SDK used exclusively
-   • Rate limiting respected
-   • Error handling for all API calls
-```
-
-### Recovery Process Security
-```
-💎 Process Security:
-
-1. Step-by-Step Execution:
-   • Each recovery step executed independently
-   • Progress tracked and logged
-   • Failure isolation prevents cascade errors
-
-2. Asset Protection:
-   • Withdrawals only to Arbitrum network
-   • Transaction hashes provided for verification
-   • Complete audit trail maintained
-
-3. Error Recovery:
-   • Graceful handling of partial failures
-   • Detailed error reporting
-   • Manual intervention support when needed
-```
-
-## ⚠️ Important Notes
-
-### Pre-Operation Requirements
-1. **Stable Network**: Ensure reliable internet connection throughout the process
-2. **Secure Environment**: Use the bot in a secure, private environment
-3. **Private Key Access**: Have the correct private key ready for the source address
-4. **Sufficient Time**: Allow 5-15 minutes for complete recovery process
-
-### During Operation
-1. **Stay Connected**: Keep Telegram app open and connected
-2. **No Interference**: Avoid other operations on the same address
-3. **Monitor Progress**: Watch for any error messages or requests for input
-4. **Be Patient**: Some steps may take several minutes to complete
-
-### Post-Operation Verification
-1. **Check Transaction**: Verify the withdrawal transaction on Arbitrum explorer
-2. **Confirm Receipt**: Check that funds arrived at the destination address
-3. **Save Records**: Keep transaction hash for your records
-4. **Clear Data**: Private key is automatically cleared from bot memory
-
-## 🔧 Technical Implementation
-
-### Recovery Algorithm
-The bot follows a standardized recovery process:
-
-```
-📋 Professional Recovery Algorithm:
-
-1. Multi-Account Asset Discovery:
-   • Parallel query of spot, perp, vault, and staked accounts
-   • Real-time USD valuation using market data
-   • Comprehensive asset inventory and conversion mapping
-
-2. Sequential Liquidation Strategy:
-   • Phase A: Complete spot account liquidation (non-USDC → USDC)
-   • Phase B: Spot-to-perp USDC consolidation transfer
-   • Phase C: Complete perp account liquidation (non-USDC → USDC)
-   • Phase D: Unified withdrawal execution
-
-3. Risk-Managed Execution:
-   • Market order execution with slippage protection
-   • Transaction confirmation at each phase
-   • Automatic retry mechanism for failed operations
-
-4. Settlement and Finalization:
-   • Proportional service fee calculation and deduction
-   • Cross-chain withdrawal to Arbitrum network
-   • Transaction hash verification and audit trail
+Day 0: First Run
+↓ Bot unstakes your HYPE
+↓ Wait 1 day
+Day 1: Second Run
+↓ Bot withdraws to spot account
+↓ Wait 7 days
+Day 8: Third Run
+↓ Bot converts HYPE to USDC and withdraws
 ```
 
-### Supported Networks
-- **Source**: Hyperliquid (mainnet or testnet)
-- **Destination**: Arbitrum One (for mainnet) or Arbitrum Sepolia (for testnet)
-- **Withdrawal Account**: Perpetual contract account only
-- **Asset**: USDC only (all assets converted to USDC before withdrawal)
+**Why Multiple Runs?**
+- Hyperliquid requires 1 day waiting period after unstaking
+- Then requires 7 days waiting period for withdrawal
+- The bot will tell you when to run it again
 
-### Error Handling
-- **Network Issues**: Automatic retry with exponential backoff
-- **API Failures**: Graceful degradation and error reporting
-- **Partial Failures**: Detailed status reporting for manual intervention
-- **Transaction Failures**: Retry mechanism with user notification
+**What You Need to Do:**
+1. Run recovery first time → Wait 1 day
+2. Run recovery second time → Wait 7 days
+3. Run recovery third time → Complete!
 
-## 🆘 Troubleshooting
+### Vault Assets (Locked)
 
-### Common Issues and Solutions
+If your vault assets are locked:
 
-#### Q: Private Key Verification Failed
-```
-❌ Possible Causes:
-1. Invalid private key format
-2. Private key doesn't match the address
-3. Incorrect key length (not 64 hex characters)
+**What Happens:**
+- Bot checks if assets are locked
+- Locked assets are skipped
+- Bot tells you how many days until unlock
 
-✅ Solutions:
-1. Ensure private key is 64 hexadecimal characters
-2. Remove 0x prefix if present
-3. Verify the private key corresponds to the correct address
-4. Try importing the key into a wallet to verify it works
-```
+**What You Need to Do:**
+1. Wait for lock-up period to end
+2. Run recovery again after unlock
+3. Bot will withdraw the vault assets
 
-#### Q: Asset Conversion Failed
-```
-❌ Possible Causes:
-1. Insufficient liquidity for the asset
-2. Market volatility causing slippage
-3. Hyperliquid API temporary issues
+### Small Positions
 
-✅ Solutions:
-1. Retry the operation after a few minutes
-2. Check if the asset is actively traded
-3. Contact support if the issue persists
-```
+**Good News:** The bot will try to close ALL positions, no matter how small!
 
-#### Q: Withdrawal Transaction Failed
-```
-❌ Possible Causes:
-1. Network congestion on Arbitrum
-2. Insufficient balance for network fees
-3. Temporary API connectivity issues
+Even if a position is worth only $0.05, the bot will attempt to close it. This ensures maximum recovery of your assets.
 
-✅ Solutions:
-1. Wait for network conditions to improve
-2. Ensure sufficient USDC balance for fees
-3. Retry the withdrawal operation
-4. Check transaction status on Arbitrum explorer
-```
+## ❓ Common Questions
 
-#### Q: Recovery Process Stuck
-```
-❌ Possible Causes:
-1. Network connectivity issues
-2. Hyperliquid API rate limiting
-3. Large transaction requiring more time
+### Q1: How long does recovery take?
+**A:** Spot and perpetual assets are usually recovered quickly. If you have staked assets, add 1 day + 7 days waiting period.
 
-✅ Solutions:
-1. Check your internet connection
-2. Wait for the current step to complete (up to 5 minutes)
-3. Do not close Telegram during the process
-4. Contact support if stuck for more than 10 minutes
-```
+### Q2: Can I cancel recovery after it starts?
+**A:** No, once recovery starts, it cannot be cancelled. Please review the recovery plan carefully before confirming.
 
-### Getting Help
-If you encounter issues not covered above:
+### Q3: What if recovery fails halfway?
+**A:** You can run recovery again. The bot will detect the current state and continue from where it left off.
 
-1. **Use Bot Feedback**: Send feedback through the bot's built-in feedback system
-2. **Provide Details**: Include the address, error message, and time of the issue
-3. **Transaction Hash**: If available, provide any transaction hashes
-4. **Screenshots**: Screenshots of error messages can be helpful
+### Q4: Why do I need to run recovery multiple times for staked assets?
+**A:** Hyperliquid requires waiting periods:
+- 1 day after unstaking
+- 7 days after withdrawal request
+This is a platform requirement, not a bot limitation.
 
-### Recovery Limitations
-- **Minimum Recovery**: $5.00 total value required
-- **Supported Assets**: Only assets with available market prices
-- **Network Dependency**: Requires both Hyperliquid and Arbitrum networks to be operational
-- **API Availability**: Dependent on Hyperliquid API uptime
+### Q5: What if my vault assets are locked?
+**A:** The bot will skip locked assets and tell you when they unlock. Run recovery again after the lock-up period ends.
+
+### Q6: Can I recover assets worth less than $5?
+**A:** The bot will attempt to recover all assets, but very small amounts (under $5 total) may not be economical after fees.
+
+### Q7: Where do my assets go?
+**A:** All assets are converted to USDC and withdrawn to the target address you specify on the Arbitrum network.
+
+### Q8: Is my private key safe?
+**A:** Yes! Your private key is only used during recovery and is automatically deleted from memory after completion. It's never saved anywhere.
+
+### Q9: What if I enter the wrong private key?
+**A:** The bot will detect the mismatch and ask you to enter the correct private key. No operations will be performed with an incorrect key.
+
+### Q10: Can I see proof of the transactions?
+**A:** Yes! After recovery, you'll receive transaction hashes that you can verify on the Arbitrum blockchain explorer.
+
+## 🆘 Need Help?
+
+If you encounter any issues:
+
+1. **Check FAQ**: Most common questions are answered above
+2. **Contact Support**: Use the feedback function in the bot
+3. **Provide Details**: Include your address and error message (never share your private key!)
+
+---
+
+**Ready to recover your assets?** Click [Quick Start Guide](quick-start.md) to begin!

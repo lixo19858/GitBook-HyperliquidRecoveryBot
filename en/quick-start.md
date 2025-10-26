@@ -130,41 +130,45 @@ Available commands:
 📍 Source Address: 0x1234...7890
 💰 Total Asset Value: $1,234.56
 
-📋 Recovery Steps:
-1. ✅ Asset analysis complete
-2. 🔄 Convert all spot ETH to USDC (0.5 ETH → 734.56 USDC)
-3. 🔄 Transfer all spot USDC to perp account (1,234.56 USDC)
-4. 🔄 Withdraw all USDC from perp account to Arbitrum
-5. 🔄 Collect service fee (0.5% = $6.17)
+📋 7-Step Recovery Process:
+1. Convert Spot Assets
+2. Transfer to Perpetual
+3. Close Positions
+4. Withdraw Vaults
+5. Process Staking
+6. Collect Fee
+7. Final Withdrawal
 
-💡 Estimated completion time: 2-5 minutes
-⚠️ Please confirm to start recovery operation
+⚠️ Please confirm to start recovery
 
 [Confirm Recovery] [Cancel Operation]
 ```
 
 ## 💰 Fee Description
 
-### Service Fee Structure
-- **Rate**: 0.5% of recovery amount
-- **Minimum Fee**: 1 USDC
-- **Billing Method**: Automatically deducted from recovered assets
+### How Much Does It Cost?
 
-### Fee Examples
-- Recovery amount $100 → Service fee $1.00 (minimum fee)
-- Recovery amount $1,000 → Service fee $5.00
-- Recovery amount $10,000 → Service fee $50.00
+**Service Fee**
+- 0.5% of total asset value
+- Minimum: 1 USDC
+
+**Withdrawal Fees** (Hyperliquid Platform)
+- 2 USDC total (2 withdrawals × 1 USDC each)
+
+### Quick Examples
+
+| Your Assets | Service Fee | Withdrawal Fees | You Receive |
+|-------------|-------------|-----------------|-------------|
+| $100 | $1 | $2 | **$97** |
+| $1,000 | $5 | $2 | **$993** |
+| $10,000 | $50 | $2 | **$9,948** |
 
 ## 🌐 Language Settings
 
-The bot supports multilingual interface:
-
-### Supported Languages
-- **Chinese**: Complete Simplified Chinese support
-- **English**: Full English language support
-
-### Switch Language
-Currently the bot uses English interface by default. Language switching function is under development.
+The bot supports:
+- 🇺🇸 **English**: Full English interface
+- 🇨🇳 **中文**: Complete Chinese interface
+- 🔄 **Auto-detect**: Automatically detects your language preference
 
 ## ⚠️ Important Notes
 
