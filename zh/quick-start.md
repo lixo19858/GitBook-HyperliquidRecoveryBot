@@ -1,5 +1,8 @@
 # 快速开始
 
+![Version](https://img.shields.io/badge/version-2.6.0-green)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
+
 欢迎使用 Hyperliquid Recovery Bot！本指南将帮助您快速上手，从第一次使用到完成资产恢复。
 
 ## 🚀 第一步：访问机器人

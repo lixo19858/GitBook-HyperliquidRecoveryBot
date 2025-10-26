@@ -1,5 +1,8 @@
 # Quick Start
 
+![Version](https://img.shields.io/badge/version-2.6.0-green)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
+
 Welcome to Hyperliquid Recovery Bot! This guide will help you get started quickly, from first use to completing asset recovery.
 
 ## 🚀 Step 1: Access the Bot

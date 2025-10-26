@@ -1,5 +1,8 @@
 # Asset Recovery Function
 
+![Version](https://img.shields.io/badge/version-2.6.0-green)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
+
 Asset recovery is the core function of Hyperliquid Recovery Bot, helping users safely recover digital assets from Hyperliquid addresses.
 
 ## 🎯 Function Overview

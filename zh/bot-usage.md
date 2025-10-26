@@ -1,5 +1,8 @@
 # 机器人使用详解
 
+![Version](https://img.shields.io/badge/version-2.6.0-green)
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--01-brightgreen)
+
 本文档详细介绍 Hyperliquid Recovery Bot 的所有功能和使用方法。
 
 ## 🤖 机器人命令
