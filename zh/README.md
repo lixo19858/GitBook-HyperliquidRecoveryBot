@@ -1,4 +1,4 @@
-# Hyperliquid Recovery Bot
+# Hyperliquid Recovery Bot 用户指南
 
 ![Hyperliquid Recovery Bot](https://img.shields.io/badge/Hyperliquid-Recovery%20Bot-blue)
 ![Version](https://img.shields.io/badge/version-2.6.0-green)
