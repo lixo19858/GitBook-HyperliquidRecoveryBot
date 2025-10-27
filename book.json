@@ -70,7 +70,7 @@
   },
   "variables": {
     "botUrl": "https://t.me/HyperliquidRecoveryBot",
-    "version": "1.0.0",
+    "version": "2.6.0",
     "supportEmail": "support@hyperliquid-recovery.com"
   }
 }

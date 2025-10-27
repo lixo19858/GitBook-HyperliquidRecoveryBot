@@ -72,10 +72,14 @@ Click the link to access directly: **[https://t.me/HyperliquidRecoveryBot](https
 
 - **Address Detection**: Completely FREE
 - **Service Fee**: 0.5% of total value (minimum 1 USDC)
-- **Withdrawal Fees**: 2 USDC (Hyperliquid platform)
-- **Total Cost Example**:
-  - Recover $1,000 → Pay $7 → Get $993
-  - Recover $100 → Pay $3 → Get $97
+- **Hyperliquid Withdrawal Fees**:
+  - Service fee withdrawal: 1 USDC (to pay platform fee for service fee withdrawal)
+  - Final withdrawal: 1 USDC (to withdraw your assets to target address)
+  - Subtotal: 2 USDC
+- **Total Cost Calculation**: Service Fee + 2 USDC
+- **Fee Examples**:
+  - Recover $1,000 → Service Fee $5 + Withdrawal Fees $2 = Total $7 → You Get $993
+  - Recover $100 → Service Fee $1 + Withdrawal Fees $2 = Total $3 → You Get $97
 
 ## 🔒 Security Guarantee
 
@@ -95,10 +99,44 @@ If you encounter any issues while using:
 
 ## ⚠️ Important Notice
 
+### Use Case
 - This bot is only for helping recover assets from high-risk flagged addresses
 - Please ensure you understand the related risks and operate carefully
-- Sensitive information like private keys is only used during recovery and will not be saved
+
+### Private Key Security
+- Private keys are temporarily encrypted and stored in memory (not written to disk)
+- Automatically deleted after recovery completion (maximum 30 minutes retention)
 - It is recommended to operate in a secure network environment
+
+### Asset Destination
+- **All assets are finally withdrawn to Arbitrum network**
+- Please ensure your target address supports Arbitrum network
+- You can use the same address as the source address to receive assets
+
+### Minimum Recovery Amount
+- Total asset value must be **> $5.00** to recover
+- Below this amount cannot cover transaction fee costs
+
+### Locked Asset Limitations
+- **Vault assets during lock-up period**: Cannot be withdrawn, need to wait for unlock and run recovery again
+- **Staked assets**: Require multi-stage recovery (see details below)
+
+### Staked Asset Recovery Process (Important)
+
+⚠️ **Staked assets require 3 separate recovery runs** (Hyperliquid protocol limitation):
+
+**First Run**:
+- Execute undelegate operation (remove delegation)
+- Assets enter **1-day lock-up period**
+
+**Second Run (after 1 day)**:
+- Execute withdraw operation (withdraw to perpetual account)
+- Assets enter **7-day lock-up period**
+
+**Third Run (after 7 days)**:
+- Assets fully unlocked and can be withdrawn normally
+
+💡 **Recommendation**: If you have staked assets, please record the timeline and run recovery 3 times as scheduled
 
 ---
 

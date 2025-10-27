@@ -91,26 +91,38 @@ The bot handles everything automatically:
 - 0.5% of total asset value
 - Minimum: 1 USDC
 
-**Withdrawal Fees** (Hyperliquid Platform)
-- 2 USDC total (2 withdrawals × 1 USDC each)
+**Hyperliquid Withdrawal Fees**
+- Service fee withdrawal: 1 USDC (to pay platform fee for service fee withdrawal)
+- Final withdrawal: 1 USDC (to withdraw your assets to target address)
+- Subtotal: 2 USDC
+
+**Total Cost Calculation**
+- Total Cost = Service Fee + 2 USDC
 
 ### Quick Examples
 
-| Your Assets | Service Fee | Withdrawal Fees | You Receive |
-|-------------|-------------|-----------------|-------------|
-| $100 | $1 | $2 | **$97** |
-| $1,000 | $5 | $2 | **$993** |
-| $10,000 | $50 | $2 | **$9,948** |
+| Your Assets | Service Fee (0.5%) | Withdrawal Fees | Total Cost | You Receive |
+|-------------|-------------------|-----------------|------------|-------------|
+| $100 | $1 | $2 | **$3** | **$97** |
+| $1,000 | $5 | $2 | **$7** | **$993** |
+| $10,000 | $50 | $2 | **$52** | **$9,948** |
 
 ### What's Included?
 
-✅ All asset conversions
-✅ All account transfers
-✅ All blockchain fees
+✅ All asset conversions (ETH, BTC, etc. → USDC)
+✅ All account transfers (Spot → Perpetual)
+✅ All blockchain transaction fees
 ✅ Technical support
 
 ❌ No hidden fees
 ❌ No extra charges
+
+### Why 2 Withdrawals?
+
+1. **First Withdrawal**: Collect service fee to platform address (requires 1 USDC platform fee)
+2. **Second Withdrawal**: Withdraw your assets to target address (requires 1 USDC platform fee)
+
+💡 This is Hyperliquid platform's withdrawal mechanism - each withdrawal requires 1 USDC fee
 
 ## 🌐 Multilingual Support
 

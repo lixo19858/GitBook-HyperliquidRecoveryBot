@@ -12,37 +12,39 @@ The bot automatically helps you recover all your assets from a Hyperliquid addre
 
 This is especially helpful when your address is flagged and you cannot access the official Hyperliquid interface.
 
-### 7-Step Recovery Process
+### Smart 7-Step Recovery Process
 
-The bot follows a standardized 7-step process:
+The bot intelligently executes the following steps based on your asset situation (steps with no assets are automatically skipped):
 
 **Step 1: Convert Spot Assets**
 - Sells all non-USDC tokens (ETH, BTC, etc.) in your spot account
 - Converts everything to USDC
+- Automatically skipped if no spot assets
 
 **Step 2: Transfer to Perpetual Account**
 - Moves all USDC from spot account to perpetual account
 - No fees for this internal transfer
 
-**Step 3: Close Perpetual Positions**
+**Step 3: Close and Convert Perpetual Positions**
 - Closes all your open perpetual contract positions
 - Converts to USDC
+- Automatically skipped if no positions
 
 **Step 4: Withdraw Vault Assets**
-- Withdraws assets from vaults (if you have any)
-- Skips locked assets (you'll need to wait for unlock period)
+- Withdraws unlocked assets from vaults
+- Locked assets are skipped (need to wait for unlock and run again)
 
 **Step 5: Process Staked Assets**
 - Unstakes your HYPE tokens (if you have any)
-- Note: Requires 1 day + 7 days waiting period
-- May need to run recovery multiple times
+- ⚠️ **Requires multi-stage recovery** (see "Staked Asset Recovery Process" below)
 
 **Step 6: Collect Service Fee**
-- Bot collects 0.5% service fee (minimum 1 USDC)
+- Deduct service fee: 0.5% (minimum 1 USDC)
+- Withdraw service fee to platform address (requires 1 USDC platform fee)
 
 **Step 7: Final Withdrawal**
 - Withdraws remaining USDC to your target address
-- 1 USDC Hyperliquid platform fee
+- Requires 1 USDC Hyperliquid platform fee
 
 ### Supported Asset Types
 
@@ -61,8 +63,8 @@ The bot follows a standardized 7-step process:
 
 ✅ **Staked Assets**
 - HYPE tokens staked to validators
-- Requires waiting period: 1 day (unstake) + 7 days (withdraw)
-- May need to run recovery 2-3 times
+- ⚠️ **Requires 3 separate recovery runs** (Hyperliquid protocol limitation)
+- Total waiting time: 1 day (undelegate) + 7 days (withdraw lock-up) = 8 days
 
 ## 🚀 Usage Methods
 
@@ -414,6 +416,91 @@ This is a platform requirement, not a bot limitation.
 
 ### Q10: Can I see proof of the transactions?
 **A:** Yes! After recovery, you'll receive transaction hashes that you can verify on the Arbitrum blockchain explorer.
+
+---
+
+## 🔄 Staked Asset Recovery Process (Important)
+
+If your address has staked assets (Staked HYPE), you need to run the recovery process 3 times.
+
+### ⚠️ Why 3 Times?
+
+This is a **Hyperliquid protocol limitation**, not a bot limitation:
+
+1. **Undelegate**: Requires 1-day lock-up period
+2. **Withdraw (to perpetual account)**: Requires 7-day lock-up period
+3. **Final Withdrawal**: After assets are unlocked, can withdraw normally
+
+### 📅 Detailed Timeline
+
+#### First Recovery Run (Day 0)
+
+**Bot will execute**:
+```
+✅ Steps 1-4: Process spot, perpetual, vault assets (if any)
+✅ Step 5: Execute undelegate operation
+   - Remove delegation from validators
+   - Asset status: delegated → undelegating
+   - Enter 1-day lock-up period
+✅ Steps 6-7: Collect service fee and withdraw other assets
+```
+
+**You need to**:
+- Record current time
+- **Wait 1 day**
+
+---
+
+#### Second Recovery Run (After Day 1)
+
+**Bot will execute**:
+```
+✅ Step 5: Execute withdraw operation (to perpetual account)
+   - Withdraw undelegated assets to perpetual account
+   - Asset status: undelegating → withdrawing
+   - Enter 7-day lock-up period
+⏭️ Other steps: Skipped if no new assets
+```
+
+**You need to**:
+- Record current time
+- **Wait 7 days**
+
+---
+
+#### Third Recovery Run (After Day 8)
+
+**Bot will execute**:
+```
+✅ Steps 1-5: Process all assets (staked assets now unlocked)
+   - Staked assets now in perpetual account, can withdraw normally
+✅ Step 6: Collect service fee
+✅ Step 7: Final withdrawal of all USDC to your target address
+```
+
+**Complete!** 🎉
+
+---
+
+### 💡 Practical Tips
+
+**Set Reminders**:
+```
+Day 0: Run first recovery
+Day 1: Run second recovery
+Day 8: Run third recovery (complete)
+```
+
+**How to Check Status**:
+- Before each run, use 🔍 Address Detection function
+- Check staked asset status changes
+- Confirm if ready for next step
+
+**Fee Notes**:
+- Each run will charge service fee (if there are recoverable assets)
+- Recommend recovering all assets in the third run
+
+---
 
 ## 🆘 Need Help?
 
